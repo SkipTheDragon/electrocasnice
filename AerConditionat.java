@@ -7,7 +7,7 @@ package electrocasnice;
 
 /**
  *
- * @author cezar
+ * @author DELL
  */
 public class AerConditionat extends Electrocasnice{
     int Capacitate, NivelZgomot;
