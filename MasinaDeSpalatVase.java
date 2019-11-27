@@ -8,6 +8,7 @@ package electrocasnice;
 /**
  *
  * @author Leo
+ * Reference Link: https://www.emag.ro/masina-de-spalat-vase-incorporabila-beko-10-seturi-5-programe-clasa-a-45-cm-dis25011/pd/D3G6QJBBM/
  */
 public class MasinaDeSpalatVase extends Electrocasnice {
     int sloturiVase, programNum, nivelZgomort;
