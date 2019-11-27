@@ -11,9 +11,9 @@ package electrocasnice;
  */
 public class Electrocasnice {
 
-    String Producator, EficientaEnergetica;
-    float Pret;
-    boolean UzCasnic;
+        String Producator, EficientaEnergetica;
+        float Pret;
+        boolean UzCasnic;
     
     Electrocasnice (){
         Producator="necunoscut";
