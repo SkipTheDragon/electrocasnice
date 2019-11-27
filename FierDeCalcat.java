@@ -10,10 +10,10 @@ package electrocasnice;
  * @author Rzvn69
  */
 public class FierDeCalcat extends Electrocasnice{
-    String Talpa, Culoare;
-    int Putere, Jet_De_Abur;
-    boolean AutoCuratare;
-    
+        String Talpa, Culoare;
+        int Putere, Jet_De_Abur;
+        boolean AutoCuratare;
+
     FierDeCalcat(){
         super();
         Talpa="Aluminiu";
@@ -40,14 +40,14 @@ FierDeCalcat(Electrocasnice e, String Talpa, String Culoare, int Putere, int Jet
 }
 
 FierDeCalcat(FierDeCalcat f){
-    super(f);
-    this.Culoare=f.Culoare;
-    this.Talpa=f.Talpa;
-    this.Jet_De_Abur=f.Jet_De_Abur;
-    this.Putere=f.Putere;
+        super(f);
+        this.Culoare=f.Culoare;
+        this.Talpa=f.Talpa;
+        this.Jet_De_Abur=f.Jet_De_Abur;
+        this.Putere=f.Putere;
 }
 public String toString(){
-return super.toString()+" \n\t Culoare "+Culoare+" cu talpa "+Talpa+" cu jet de aburi "+Jet_De_Abur+" si putere de: "+Putere+"W";
+        return super.toString()+" \n\t Culoare "+Culoare+" cu talpa "+Talpa+" cu jet de aburi "+Jet_De_Abur+" si putere de: "+Putere+"W";
 }
 }
 
