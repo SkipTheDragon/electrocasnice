@@ -35,14 +35,14 @@ public class Monitor extends Electrocasnice {
        this.UltraWide=UltraWide;
        this.UHD=UHD;
     }
-    Monitor(Monitor a){
-        super(a);
-       this.Diagonala=Diagonala;
-       this.RataRefresh=RataRefresh;
-       this.UltraWide=UltraWide;
-       this.UHD=UHD;
+    Monitor(Monitor m){
+        super(m);
+       this.Diagonala=m.Diagonala;
+       this.RataRefresh=m.RataRefresh;
+       this.UltraWide=m.UltraWide;
+       this.UHD=m.UHD;
     }
     public String toString(){
-        return super.toString()+" \n\t Diagonala monitorului este de "+Diagonala+"cm. Ultra Wide:"
+        return super.toString()+" \n\t Diagonala monitorului este de "+Diagonala+"cm. Ultra Wide: "+(UltraWide?"da":"nu")+"; "+(UHD?"cu":"fara")+" rezolutie UHD. Rata de refresh este de "+RataRefresh+" Hz.";
     }
 }

@@ -28,6 +28,7 @@ public class UscatorPar extends Electrocasnice {
         this.TreaptaDeAerRece=TreaptaDeAerRece;
         this.TrepteDeIncalzire=TrepteDeIncalzire;
         this.TrepteDeViteza=TrepteDeViteza;
+        this.DifuzorDeVolum=DifuzorDeVolum;
     }
     
     UscatorPar(Electrocasnice e, int TrepteDeViteza, int TrepteDeIncalzire, int Putere, boolean TreaptaDeAerRece, boolean DifuzorDeVolum){
@@ -36,6 +37,7 @@ public class UscatorPar extends Electrocasnice {
     this.TreaptaDeAerRece=TreaptaDeAerRece;
     this.TrepteDeIncalzire=TrepteDeIncalzire;
     this.TrepteDeViteza=TrepteDeViteza;
+    this.DifuzorDeVolum=DifuzorDeVolum;
     }
     
     UscatorPar(UscatorPar u){
@@ -43,9 +45,10 @@ public class UscatorPar extends Electrocasnice {
     this.TreaptaDeAerRece=u.TreaptaDeAerRece;
     this.TrepteDeIncalzire=u.TrepteDeIncalzire;
     this.TrepteDeViteza=u.TrepteDeViteza;
+    this.DifuzorDeVolum=u.DifuzorDeVolum;
     }
     
     public String toString(){
-    return super.toString()+" \n\t Putere de "+Putere+" , cu trepte de aer rece "+TreaptaDeAerRece+" ,cu trepte de incalzire "+TrepteDeIncalzire+" si "+TrepteDeViteza+" trepte de viteza";
+    return super.toString()+" \n\t Putere de "+Putere+" W, cu "+TrepteDeIncalzire+" trepte de incalzire si "+TrepteDeViteza+" trepte de viteza, "+(TreaptaDeAerRece?"cu":"fara")+" treapta de aer rece, "+(DifuzorDeVolum?"cu":"fara")+" difuzor de volum.";
 }
 }

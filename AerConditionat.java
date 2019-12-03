@@ -47,6 +47,6 @@ public class AerConditionat extends Electrocasnice{
        this.Portabil=a.Portabil;
     }
     public String toString(){
-        return super.toString()+" \n\t Capacitatea aerului conditionat este de "+Capacitate+"BTU, Nivelul de zgomot al unitatii interne este de "+NivelZgomot+"dB. Funtie WiFi:";
+        return super.toString()+" \n\t Capacitatea aerului conditionat este de "+Capacitate+"BTU, Nivelul de zgomot al unitatii interne este de "+NivelZgomot+"dB. Functie WiFi: "+(wifi?"Da, ":"Nu, ")+"Kit instalare inclus in pachet: "+(kitInstalare?"Da, ":"Nu, ")+"Portabil"+(Portabil?"Da.":"Nu.");
     }
 }

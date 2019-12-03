@@ -29,7 +29,8 @@ public class FierDeCalcat extends Electrocasnice{
         this.Talpa=Talpa;
         this.Jet_De_Abur=Jet_De_Abur;
         this.Putere=Putere;
-       }
+        this.AutoCuratare=AutoCuratare;
+}
     
 FierDeCalcat(Electrocasnice e, String Talpa, String Culoare, int Putere, int Jet_De_Abur, boolean AutoCuratare){
         super(e);
@@ -37,6 +38,7 @@ FierDeCalcat(Electrocasnice e, String Talpa, String Culoare, int Putere, int Jet
         this.Talpa=Talpa;
         this.Jet_De_Abur=Jet_De_Abur;
         this.Putere=Putere;
+        this.AutoCuratare=AutoCuratare;
 }
 
 FierDeCalcat(FierDeCalcat f){
@@ -45,9 +47,10 @@ FierDeCalcat(FierDeCalcat f){
         this.Talpa=f.Talpa;
         this.Jet_De_Abur=f.Jet_De_Abur;
         this.Putere=f.Putere;
+        this.AutoCuratare=f.AutoCuratare;
 }
 public String toString(){
-        return super.toString()+" \n\t Culoare "+Culoare+" cu talpa "+Talpa+" cu jet de aburi "+Jet_De_Abur+" si putere de: "+Putere+"W";
+        return super.toString()+" \n\t Culoare "+Culoare+" cu talpa "+Talpa+", cu jet de aburi "+Jet_De_Abur+", putere de: "+Putere+" W, "+(AutoCuratare?"cu":"fara")+" functie de Autocuratare.";   
 }
 }
 

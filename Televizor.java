@@ -32,13 +32,13 @@ public class Televizor extends Electrocasnice {
        this.smart=smart;
        this.UHD=UHD;
     }
-    Televizor(Televizor a){
-        super(a);
-       this.Diagonala=Diagonala;
-       this.smart=smart;
-       this.UHD=UHD;
+    Televizor(Televizor t){
+        super(t);
+       this.Diagonala=t.Diagonala;
+       this.smart=t.smart;
+       this.UHD=t.UHD;
     }
     public String toString(){
-        return super.toString()+" \n\t Diagonala televizorului este de "+Diagonala+"cm. Smart:"
+        return super.toString()+" \n\t Diagonala televizorului este de "+Diagonala+" cm."+(smart?"Cu":"Fara")+" functie smart, "+(UHD?"cu":"fara")+" rezolutie UHD.";
     }
 }
