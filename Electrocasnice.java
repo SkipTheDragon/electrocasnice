@@ -34,6 +34,6 @@ public class Electrocasnice {
         this.UzCasnic=e.UzCasnic;
     }
     public String toString(){
-        return "Electrocanic "+Producator+" "+EficientaEnergetica+" "+Pret+" lei \n\t Uz Casnic "+(UzCasnic?"da":"nu");
+        return "Electrocasnic "+Producator+" "+EficientaEnergetica+" "+Pret+" lei \n\t Uz Casnic "+(UzCasnic?"da":"nu");
     }
 }

@@ -21,29 +21,33 @@ public class MasinaDeSpalatVase extends Electrocasnice {
         programNum= 10;
         nivelZgomort= 36;
         energyConsumptionPerCycle =  0.92;
+        Culoare="Alba";
     }
-    MasinaDeSpalatVase(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int sloturiVase, int nivelZgomort, int programNum, double energyConsumptionPerCycle){
+    MasinaDeSpalatVase(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int sloturiVase, int nivelZgomort, int programNum, double energyConsumptionPerCycle, String Culoare){
         super(Producator, EficientaEnergetica, P, UzCasnic);
         this.sloturiVase= sloturiVase;
         this.nivelZgomort= nivelZgomort;
         this.programNum= programNum;
         this.energyConsumptionPerCycle= energyConsumptionPerCycle;
+        this.Culoare=Culoare;
     }
-    MasinaDeSpalatVase(Electrocasnice e, double energyConsumptionPerCycle, int programNum, int nivelZgomort, int sloturiVase){
+    MasinaDeSpalatVase(Electrocasnice e, double energyConsumptionPerCycle, int programNum, int nivelZgomort, int sloturiVase, String Culoare){
         super(e);
         this.energyConsumptionPerCycle= energyConsumptionPerCycle;
         this.programNum= programNum;
         this.nivelZgomort= nivelZgomort;
         this.sloturiVase= sloturiVase;
+        this.Culoare=Culoare;
     }
-    MasinaDeSpalatVase(MasinaDeSpalatVase c){
-        super(c);
-        this.energyConsumptionPerCycle= c.energyConsumptionPerCycle;
-        this.programNum= c.programNum;
-        this.nivelZgomort= c.nivelZgomort;
-        this.sloturiVase= c.sloturiVase;
+    MasinaDeSpalatVase(MasinaDeSpalatVase v){
+        super(v);
+        this.energyConsumptionPerCycle= v.energyConsumptionPerCycle;
+        this.programNum= v.programNum;
+        this.nivelZgomort= v.nivelZgomort;
+        this.sloturiVase= v.sloturiVase;
+        this.Culoare=v.Culoare;
     }
     public String toString(){
-        return super.toString()+" \n\t Numar programe: "+programNum+"; Nivelul de zgomot este "+nivelZgomort+"; Sloturi pentru vase: "+sloturiVase+"; Are un consum de "+energyConsumptionPerCycle+"Kw/h per ciclu";
+        return super.toString()+" \n\t Numar programe: "+programNum+"; Nivelul de zgomot este "+nivelZgomort+"; Sloturi pentru vase: "+sloturiVase+"; Are un consum de "+energyConsumptionPerCycle+"Kw/h per ciclu; Colarea "+Culoare;
     }
 }

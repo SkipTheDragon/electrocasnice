@@ -36,14 +36,14 @@ public class MasinaDeSpalatRufe extends Electrocasnice {
         this.zgomotCentrifugare= zgomotCentrifugare;
         this.rotatii= rotatii;
     }
-    MasinaDeSpalatRufe(MasinaDeSpalatRufe c){
-        super(c);
-        this.clasa= c.clasa;
-        this.zgomotSpalare= c.zgomotSpalare;
-        this.zgomotCentrifugare= c.zgomotCentrifugare;
-        this.rotatii= c.rotatii;
+    MasinaDeSpalatRufe(MasinaDeSpalatRufe r){
+        super(r);
+        this.clasa= r.clasa;
+        this.zgomotSpalare= r.zgomotSpalare;
+        this.zgomotCentrifugare= r.zgomotCentrifugare;
+        this.rotatii= r.rotatii;
     }
     public String toString(){
-        return super.toString()+" \n\t Clasa: "+clasa+"; Zgomot spalare "+zgomotSpalare+" db; Zgomot centrifugare: "+zgomotCentrifugare+"db; Rotatii "+rotatii+" RPM";
+        return super.toString()+" \n\t Clasa: "+clasa+"; Zgomot spalare "+zgomotSpalare+" db; Zgomot centrifugare: "+zgomotCentrifugare+" db; Rotatii: "+rotatii+" RPM";
     }
 }

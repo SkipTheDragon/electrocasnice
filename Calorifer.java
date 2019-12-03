@@ -38,6 +38,6 @@ public class Calorifer extends Electrocasnice {
         this.Culoare=c.Culoare;
     }
     public String toString(){
-        return super.toString()+" \n\t Puterea este de "+Putere+"W; Caloriferul are "+nrElementi+" elementi; Culoarea este"+Culoare;
+        return super.toString()+" \n\t Puterea este de "+Putere+"W; Caloriferul are "+nrElementi+" elementi; Culoarea este "+Culoare;
     }
 }
