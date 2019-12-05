@@ -76,24 +76,24 @@ public class ClasaTestElectrocasnice {
         f[4]=new FierDeCalcat("Bosch","A",113.99f,true,"Paladium","Galben",1800,50,true);
         
         t1=new Televizor();
-        t2=new Televizor("Samsung","A++",2499.99f,true,125,true,true);
-        t3=new Televizor(e2,108,true,false);
+        t2=new Televizor("Samsung","A++",2499.99f,true,125,true,true,false,false);
+        t3=new Televizor(e2,108,true,false,false,false);
         e[0]=e1;
         t[0]=t1;
         t[1]=t2;
         t[2]=t3;
-        t[3]=new Televizor("LG","A++",1999.99f,true,102,true,false);
-        t[4]=new Televizor("Philips","A+++",3999.99f,true,150,true,true);
+        t[3]=new Televizor("LG","A++",1999.99f,true,102,true,false,false,false);
+        t[4]=new Televizor("Philips","A+++",3999.99f,true,150,true,true,true,true);
         
         m1=new Monitor();
-        m2=new Monitor("Samsung","C--",10049.99f,true,80,30,true,true);
-        m3=new Monitor(e2,120,60,true,false);
+        m2=new Monitor("Samsung","C",10049.99f,true,80,30,true,true,true,true);
+        m3=new Monitor(e2,120,60,true,false,false,false);
         e[0]=e1;
         m[0]=m1;
         m[1]=m2;
         m[2]=m3;
-        m[3]=new Monitor("DELL","A++",1344.99f,false,50,60,false,true);
-        m[4]=new Monitor("Philips","C",506.99f,true,60,45,false,false);
+        m[3]=new Monitor("DELL","A++",1344.99f,false,50,60,false,true,false,false);
+        m[4]=new Monitor("Philips","C",506.99f,true,60,45,false,false,false,false);
 
         
         v1=new MasinaDeSpalatVase();
