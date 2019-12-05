@@ -11,7 +11,7 @@ package electrocasnice;
  */
 public class FierDeCalcat extends Electrocasnice{
         String Talpa, Culoare;
-        int Putere, Jet_De_Abur;
+        int Putere, Jet_De_Abur, Tensiune;
         boolean AutoCuratare;
 
     FierDeCalcat(){
@@ -20,15 +20,17 @@ public class FierDeCalcat extends Electrocasnice{
         Culoare="negru";
         Putere=1100;
         Jet_De_Abur=50;
+        Tensiune=220;
         AutoCuratare=true;
     }
     
-    FierDeCalcat(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, String Talpa, String Culoare, int Putere, int Jet_De_Abur, boolean AutoCuratare){
+    FierDeCalcat(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, String Talpa, String Culoare, int Putere, int Jet_De_Abur, int Tensiune, boolean AutoCuratare){
         super(Producator, EficientaEnergetica, P, UzCasnic);
         this.Culoare=Culoare;
         this.Talpa=Talpa;
         this.Jet_De_Abur=Jet_De_Abur;
         this.Putere=Putere;
+        this.Tensiune=Tensiune;
         this.AutoCuratare=AutoCuratare;
 }
     
@@ -38,6 +40,7 @@ FierDeCalcat(Electrocasnice e, String Talpa, String Culoare, int Putere, int Jet
         this.Talpa=Talpa;
         this.Jet_De_Abur=Jet_De_Abur;
         this.Putere=Putere;
+        this.Tensiune=Tensiune;
         this.AutoCuratare=AutoCuratare;
 }
 
@@ -47,10 +50,11 @@ FierDeCalcat(FierDeCalcat f){
         this.Talpa=f.Talpa;
         this.Jet_De_Abur=f.Jet_De_Abur;
         this.Putere=f.Putere;
+        this.Tensiune=f.Tensiune;
         this.AutoCuratare=f.AutoCuratare;
 }
 public String toString(){
-        return super.toString()+" \n\t Culoare "+Culoare+" cu talpa "+Talpa+", cu jet de aburi "+Jet_De_Abur+", putere de: "+Putere+" W, "+(AutoCuratare?"cu":"fara")+" functie de Autocuratare.";   
+        return super.toString()+" \n\t Culoare "+Culoare+" cu talpa "+Talpa+", cu jet de aburi "+Jet_De_Abur+", putere de: "+Putere+" W, "+(AutoCuratare?"cu":"fara")+" functie de Autocuratare si Tensiune de:"+Tensiune+"V.";   
 }
 }
 

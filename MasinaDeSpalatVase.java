@@ -25,7 +25,7 @@ public class MasinaDeSpalatVase extends Electrocasnice {
         greutate = 9;
         consumApa = 54484;
     }
-    MasinaDeSpalatVase(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int sloturiVase, int nivelZgomort, int programNum, double energyConsumptionPerCycle, String Culoare, int consumApa){
+    MasinaDeSpalatVase(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int sloturiVase, int nivelZgomort, int programNum, double energyConsumptionPerCycle, String Culoare,int greutate ,int consumApa){
         super(Producator, EficientaEnergetica, P, UzCasnic);
         this.sloturiVase= sloturiVase;
         this.nivelZgomort= nivelZgomort;

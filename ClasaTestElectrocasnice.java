@@ -36,14 +36,14 @@ public class ClasaTestElectrocasnice {
         e3.Producator="Miele";
         
         a1=new AerConditionat();
-        a2=new AerConditionat("Daikin", "A+++",3749.99f,true,18000,20,36,"R410A",true,true,false,true);
-        a3=new AerConditionat(e2,12000,21,24,"R32",true,false,false,true);
+        a2=new AerConditionat("Daikin", "A+++",3749.99f,true,18000,20,true,true,false);
+        a3=new AerConditionat(e2,12000,21,true,false,false);
         e[0]=e1;
         a[0]=a1;
         a[1]=a2;
         a[2]=a3;
-        a[3]=new AerConditionat("Panasonic","A+",1999.90f,true,12000,26,24,"R32",false,false,false,true);
-        a[4]=new AerConditionat("Electrolux","B",799f,true,9000,38,24,"R32",false,false,true,false);
+        a[3]=new AerConditionat("Panasonic","A+",1999.90f,true,12000,26,false,false,false);
+        a[4]=new AerConditionat("Electrolux","B",799f,true,9000,38,false,false,true);
         
         c1=new Calorifer();
         c2=new Calorifer("AEG","A",409.99f,true,2200,11,"negru");
@@ -66,14 +66,14 @@ public class ClasaTestElectrocasnice {
         u[4]=new UscatorPar("Rowenta","B",300.00f,false,3,3,2400,true,true);
         
         f[1]=new FierDeCalcat();
-        f[2]=new FierDeCalcat("Tefal","A++",199.99f,true,"Ceramica","Alb",2400,180,true);
+        f[2]=new FierDeCalcat("Tefal","A++",199.99f,true,"Ceramica","Alb",2400,220,180,true);
         f[3]=new FierDeCalcat(e2,"Ceramica","Verde",2300,180,false);
         e[0]=e1;
         f[0]=f1;
         f[1]=f2;
         f[2]=f3;
-        f[3]=new FierDeCalcat("Philips","A++",215.99f,true,"Ceramica","Rosie",2300,180,true);
-        f[4]=new FierDeCalcat("Bosch","A",113.99f,true,"Paladium","Galben",1800,50,true);
+        f[3]=new FierDeCalcat("Philips","A++",215.99f,true,"Ceramica","Rosie",2300,230,180,true);
+        f[4]=new FierDeCalcat("Bosch","A",113.99f,true,"Paladium","Galben",1800,230,50,true);
         
         t1=new Televizor();
         t2=new Televizor("Samsung","A++",2499.99f,true,125,true,true,false,false);
@@ -97,15 +97,25 @@ public class ClasaTestElectrocasnice {
 
         
         v1=new MasinaDeSpalatVase();
-        v2=new MasinaDeSpalatVase("Samsung","A++",5000.99f,true,14,32,8,0.54,"Alb");
-        v3=new MasinaDeSpalatVase(e2,13,49,6,1,"Gri");
+        v2=new MasinaDeSpalatVase("Samsung","A++",5000.99f,true,14,32,8,0.54,"Alb",8,3707);
+        v3=new MasinaDeSpalatVase(e2,13,49,6,1,"Gri",6,2697);
         e[0]=e1;
         v[0]=v1;
         v[1]=v2;
         v[2]=v3;
-        v[3]=new MasinaDeSpalatVase("Bosch","A+++",4289.99f,true,13,42,8,0.73,"Negru");
-        v[4]=new MasinaDeSpalatVase("Stalgast","B",16350.99f,false,120,58,16,3.4,"Gri");
+        v[3]=new MasinaDeSpalatVase("Bosch","A+++",4289.99f,true,13,42,8,0.73,"Negru",9,3796);
+        v[4]=new MasinaDeSpalatVase("Stalgast","B",16350.99f,false,120,58,16,3.4,"Gri",5,2765);
         
+        r1=new MasinaDeSpalatRufe();
+        
+        r2=new MasinaDeSpalatRufe("Arctic","C",2300.99f,true,32,2,54,"Alb",7,8707);
+        r3=new MasinaDeSpalatRufe(e2,"Gri",49,6,1,6,2697);
+        e[0]=e1;
+        r[0]=r1;
+        r[1]=r2;
+        r[2]=r3;
+        r[3]=new MasinaDeSpalatRufe("Bosch","A++",3489.99f,true,42,8,73,"Negru",9,9796);
+        r[4]=new MasinaDeSpalatRufe("Samsung","B",1650.99f,false,58,16,3,"Alb",15,6765);
         
         System.out.println(e1);
         System.out.println(e2);
