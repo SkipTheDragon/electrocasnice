@@ -36,14 +36,14 @@ public class ClasaTestElectrocasnice {
         e3.Producator="Miele";
         
         a1=new AerConditionat();
-        a2=new AerConditionat("Daikin", "A+++",3749.99f,true,18000,20,true,true,false);
-        a3=new AerConditionat(e2,12000,21,true,false,false);
+        a2=new AerConditionat("Daikin", "A+++",3749.99f,true,18000,20,36,"R410A",true,true,false,true);
+        a3=new AerConditionat(e2,12000,21,24,"R32",true,false,false,true);
         e[0]=e1;
         a[0]=a1;
         a[1]=a2;
         a[2]=a3;
-        a[3]=new AerConditionat("Panasonic","A+",1999.90f,true,12000,26,false,false,false);
-        a[4]=new AerConditionat("Electrolux","B",799f,true,9000,38,false,false,true);
+        a[3]=new AerConditionat("Panasonic","A+",1999.90f,true,12000,26,24,"R32",false,false,false,true);
+        a[4]=new AerConditionat("Electrolux","B",799f,true,9000,38,24,"R32",false,false,true,false);
         
         c1=new Calorifer();
         c2=new Calorifer("AEG","A",409.99f,true,2200,11,"negru");
