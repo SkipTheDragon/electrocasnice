@@ -1,9 +1,11 @@
+package electrocasnice;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package electrocasnice;
+
 
 /**
  *
@@ -47,6 +49,6 @@ public class AerConditionat extends Electrocasnice{
        this.Portabil=a.Portabil;
     }
     public String toString(){
-        return super.toString()+" \n\t Capacitatea aerului conditionat este de "+Capacitate+"BTU, Nivelul de zgomot al unitatii interne este de "+NivelZgomot+"dB. Functie WiFi: "+(wifi?"Da, ":"Nu, ")+"Kit instalare inclus in pachet: "+(kitInstalare?"Da, ":"Nu, ")+"Portabil"+(Portabil?"Da.":"Nu.");
+        return super.toString()+" \n\t Capacitatea aerului conditionat este de "+Capacitate+"BTU, Nivelul de zgomot al unitatii interne este de "+NivelZgomot+"dB. Functie WiFi: "+(wifi?"Da, ":"Nu, ")+"Kit instalare inclus in pachet: "+(kitInstalare?"Da, ":"Nu, ")+"Portabil: "+(Portabil?"Da.":"Nu.");
     }
 }
