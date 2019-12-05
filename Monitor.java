@@ -11,7 +11,7 @@ package electrocasnice;
  */
 public class Monitor extends Electrocasnice {
         int Diagonala, RataRefresh;
-    boolean UltraWide, UHD;
+    boolean UltraWide, UHD, Curbat, Gaming;
     
     Monitor(){
     super();
@@ -19,21 +19,25 @@ public class Monitor extends Electrocasnice {
     RataRefresh=75;
     UltraWide=false;
     UHD=true;
+    Curbat=false;
+    Gaming=false;
 }
     
-    Monitor(String Producator, String EficientaEnergetica, float Pret, boolean UzCasnic, int Diagonala, int RataRefresh,  boolean UltraWide, boolean UHD){
+    Monitor(String Producator, String EficientaEnergetica, float Pret, boolean UzCasnic, int Diagonala, int RataRefresh, boolean UltraWide, boolean UHD, boolean Curbat, boolean Gaming){
        super(Producator, EficientaEnergetica, Pret, UzCasnic);
        this.Diagonala=Diagonala;
        this.RataRefresh=RataRefresh;
        this.UltraWide=UltraWide;
        this.UHD=UHD;
     }
-    Monitor(Electrocasnice e, int Diagonala, int RataRefresh, boolean UltraWide, boolean UHD){
+    Monitor(Electrocasnice e, int Diagonala, int RataRefresh, boolean UltraWide, boolean UHD, boolean Curbat, boolean Gaming){
        super(e);
        this.Diagonala=Diagonala;
        this.RataRefresh=RataRefresh;
        this.UltraWide=UltraWide;
        this.UHD=UHD;
+       this.Curbat=Curbat;
+       this.Gaming=Gaming;
     }
     Monitor(Monitor m){
         super(m);
@@ -41,8 +45,10 @@ public class Monitor extends Electrocasnice {
        this.RataRefresh=m.RataRefresh;
        this.UltraWide=m.UltraWide;
        this.UHD=m.UHD;
+       this.Curbat=m.Curbat;
+       this.Gaming=m.Gaming;
     }
     public String toString(){
-        return super.toString()+" \n\t Diagonala monitorului este de "+Diagonala+"cm. Ultra Wide: "+(UltraWide?"da":"nu")+"; "+(UHD?"cu":"fara")+" rezolutie UHD. Rata de refresh este de "+RataRefresh+" Hz.";
+        return super.toString()+" \n\t Diagonala monitorului este de "+Diagonala+"cm. Ultra Wide: "+(UltraWide?"da":"nu")+"; "+(UHD?"cu":"fara")+" rezolutie UHD. Rata de refresh este de "+RataRefresh+" Hz. Monitorul este curbat? "+(Curbat?"da":"nu")+"Monitorul este de gaming? "+(Gaming?"da":"nu");
     }
 }
