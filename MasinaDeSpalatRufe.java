@@ -13,29 +13,29 @@ package electrocasnice;
 
 public class MasinaDeSpalatRufe extends Electrocasnice {
     int rotatii, zgomotCentrifugare, zgomotSpalare, greutate, consumApa;
-    String clasa;
+    String culoare;
     
     MasinaDeSpalatRufe(){
         super();
         rotatii = 1600;
         zgomotCentrifugare = 77;
         zgomotSpalare = 51;
-        clasa =  "A++";
+        culoare = "Alb";
         greutate = 7;
         consumApa= 90008;
     }
-    MasinaDeSpalatRufe(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int rotatii, int zgomotCentrifugare, int zgomotSpalare, String clasa, int greutate, int consumApa){
+    MasinaDeSpalatRufe(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int rotatii, int zgomotCentrifugare, int zgomotSpalare, String culoare, int greutate, int consumApa){
         super(Producator, EficientaEnergetica, P, UzCasnic);
         this.rotatii= rotatii;
         this.zgomotCentrifugare= zgomotCentrifugare;
         this.zgomotSpalare= zgomotSpalare;
-        this.clasa= clasa;
+        this.culoare= culoare;
         this.greutate= greutate;
         this.consumApa= consumApa;
     }
-    MasinaDeSpalatRufe(Electrocasnice e, String clasa, int zgomotSpalare, int zgomotCentrifugare, int rotatii, int greutate, int consumApa){
+    MasinaDeSpalatRufe(Electrocasnice e, String culoare, int zgomotSpalare, int zgomotCentrifugare, int rotatii, int greutate, int consumApa){
         super(e);
-        this.clasa= clasa;
+        this.culoare= culoare;
         this.zgomotSpalare= zgomotSpalare;
         this.zgomotCentrifugare= zgomotCentrifugare;
         this.rotatii= rotatii;
@@ -44,7 +44,7 @@ public class MasinaDeSpalatRufe extends Electrocasnice {
     }
     MasinaDeSpalatRufe(MasinaDeSpalatRufe r){
         super(r);
-        this.clasa= r.clasa;
+        this.culoare= r.culoare;
         this.zgomotSpalare= r.zgomotSpalare;
         this.zgomotCentrifugare= r.zgomotCentrifugare;
         this.rotatii= r.rotatii;
@@ -53,6 +53,6 @@ public class MasinaDeSpalatRufe extends Electrocasnice {
 
     }
     public String toString(){
-        return super.toString()+" \n\t Clasa: "+clasa+"; Zgomot spalare "+zgomotSpalare+" db; Zgomot centrifugare: "+zgomotCentrifugare+" db; Rotatii: "+rotatii+" RPM; Greutate:"+greutate+";Consum apa anual:"+consumApa;
+        return super.toString()+" \n\t Culoare: "+culoare+"; Zgomot spalare "+zgomotSpalare+" db; Zgomot centrifugare: "+zgomotCentrifugare+" db; Rotatii: "+rotatii+" RPM; Greutate:"+greutate+";Consum apa anual:"+consumApa;
     }
 }
