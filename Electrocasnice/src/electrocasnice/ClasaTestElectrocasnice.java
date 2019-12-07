@@ -6,7 +6,7 @@
 package electrocasnice;
 /**
  *
- * @author Familia20
+ * @author Leo
  */
 public class ClasaTestElectrocasnice {
     Electrocasnice e1,e2,e3;
@@ -66,10 +66,10 @@ public class ClasaTestElectrocasnice {
         m[2]=new Monitor("DELL","A++",1344.99f,false,50,60,false,true,false,false);
         m[3]=new Monitor("Philips","C",506.99f,true,60,45,false,false,false,false);
 
-        v[0]=new MasinaDeSpalatVase("Samsung","A++",5000.99f,true,14,32,8,0.54,"Alb",8,3707);
+        v[0]=new MasinaDeSpalatVase("Samsung","A++",5000.99f,true,14,32,8,0.54d,"Alb",8,3707);
         v[1]=new MasinaDeSpalatVase(e2,13,49,6,1,"Gri",6,2697);
-        v[2]=new MasinaDeSpalatVase("Bosch","A+++",4289.99f,true,13,42,8,0.73,"Negru",9,3796);
-        v[3]=new MasinaDeSpalatVase("Stalgast","B",16350.99f,false,120,58,16,3.4,"Gri",5,2765);
+        v[2]=new MasinaDeSpalatVase("Bosch","A+++",4289.99f,true,13,42,8,0.73d,"Negru",9,3796);
+        v[3]=new MasinaDeSpalatVase("Stalgast","B",16350.99f,false,120,58,16,3.4d,"Gri",5,2765);
 
         r[0]=new MasinaDeSpalatRufe("Arctic","C",2300.99f,true,32,2,54,"Alb",7,8707);
         r[1]=new MasinaDeSpalatRufe(e2,"Gri",49,6,1,6,2697);
@@ -85,6 +85,8 @@ public class ClasaTestElectrocasnice {
                 System.out.println(m[x]);
                 System.out.println(v[x]);
                 System.out.println(r[x]);
-        }
+        } 
+      
+    //  System.out.println(v[0].sloturiVase); // outputs specified variable value
     }
 }

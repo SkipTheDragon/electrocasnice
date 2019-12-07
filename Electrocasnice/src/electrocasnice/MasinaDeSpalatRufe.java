@@ -16,7 +16,7 @@ public class MasinaDeSpalatRufe extends Electrocasnice {
     String culoare;
     
     MasinaDeSpalatRufe(){
-        super();
+        super(); // Putem accessa valorile/constructorul/functiile clasei parinte
         rotatii = 1600;
         zgomotCentrifugare = 77;
         zgomotSpalare = 51;
