@@ -36,7 +36,7 @@ public class ClasaTestElectrocasnice {
         e3.Producator="Miele";
         e[0]=e1;
 
-        a[0]=new AerConditionat("Daikin", "A+++",3749.99f,true,18000,20,true,true,false);
+        a[0]=new AerConditionat("Daikin", "A+++",3749.99f,false,18000,20,true,true,false);
         a[1]=new AerConditionat(e2,12000,21,true,false,false);
         a[2]=new AerConditionat("Panasonic","A+",1999.90f,true,12000,26,false,false,false);
         a[3]=new AerConditionat("Electrolux","B",799f,true,9000,38,false,false,true);
@@ -76,7 +76,7 @@ public class ClasaTestElectrocasnice {
         r[2]=new MasinaDeSpalatRufe("Bosch","A++",3489.99f,true,42,8,73,"Negru",9,9796);
         r[3]=new MasinaDeSpalatRufe("Samsung","B",1650.99f,false,58,16,3,"Alb",15,6765);
               
-        for(int x=0;x<4;x++) {
+        /* for(int x=0;x<4;x++) {
                 System.out.println(a[x]);
                 System.out.println(c[x]);
                 System.out.println(u[x]);
@@ -85,8 +85,8 @@ public class ClasaTestElectrocasnice {
                 System.out.println(m[x]);
                 System.out.println(v[x]);
                 System.out.println(r[x]);
-        } 
+        } */
       
-    //  System.out.println(v[0].sloturiVase); // outputs specified variable value
+     //System.out.println(v[0].sloturiVase); // outputs specified variable value
     }
 }
