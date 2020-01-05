@@ -15,26 +15,40 @@ import javax.swing.ImageIcon;
 import java.awt.Image;
 import javax.imageio.ImageIO;
 import java.util.*;  
+import java.util.ArrayList;
+import javax.swing.JPanel;
+
 
 public class ElectrocasniceGUI extends javax.swing.JFrame {
     ClasaTestElectrocasnice cte;
     /**
      * Creates new form ElectrocasniceGUI
      */
+            javax.swing.JPanel[] panelArray = new javax.swing.JPanel[8];
+
+    public void setPanelInVisible(javax.swing.JPanel obiect) {
+        for(int i=0;i<8;i++) {
+            if(panelArray[i].isVisible() == true && panelArray[i] != obiect) panelArray[i].setVisible(false);
+        }
+    }
+    
     public ElectrocasniceGUI() {
         initComponents();
         cte=new ClasaTestElectrocasnice();
         
-        jPanel10.setVisible(false);
-         
-        try{
-            Image img=ImageIO.read(getClass().getResource("restart.png"));
-            
-        }
-        catch (Exception ex){
-            System.out.println(ex);
-        }
+        panelArray[0] = AerConditionat;
+        panelArray[1] = Calorifer;
+        panelArray[2] = FierDeCalcat;
+        panelArray[3] = MasinaDeSpalatRufe;
+        panelArray[4] = MasinaDeSpalatVase;
+        panelArray[5] = Monitor;
+        panelArray[6] = Televizor;
+        panelArray[7] = UscatorDePar;
         
+        for(int i=0;i<8;i++) {
+            if(panelArray[i].isVisible() == true) panelArray[i].setVisible(false);
+        }
+             
     }
 
     /**
@@ -74,13 +88,22 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jPanel10 = new javax.swing.JPanel();
+        jLayeredPane1 = new javax.swing.JLayeredPane();
+        AerConditionat = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
-        jLabel19 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jTextField2 = new javax.swing.JTextField();
+        Calorifer = new javax.swing.JPanel();
+        FierDeCalcat = new javax.swing.JPanel();
+        UscatorDePar = new javax.swing.JPanel();
+        MasinaDeSpalatRufe = new javax.swing.JPanel();
+        MasinaDeSpalatVase = new javax.swing.JPanel();
+        Televizor = new javax.swing.JPanel();
+        Monitor = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,6 +147,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jLabel3.setText("Echipamente electrocasnice");
 
         jPanel3.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/electrocasnice/icons8_radiator_32px.png"))); // NOI18N
@@ -152,6 +180,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         );
 
         jPanel4.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/electrocasnice/icons8_iron_32px.png"))); // NOI18N
@@ -180,6 +213,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         );
 
         jPanel5.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/electrocasnice/icons8_hair_dryer_32px.png"))); // NOI18N
@@ -208,6 +246,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         );
 
         jPanel6.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel6MouseClicked(evt);
+            }
+        });
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/electrocasnice/icons8_washing_machine_32px.png"))); // NOI18N
@@ -236,6 +279,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         );
 
         jPanel7.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/electrocasnice/icons8_dishwasher_32px.png"))); // NOI18N
@@ -264,6 +312,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         );
 
         jPanel8.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/electrocasnice/icons8_tv_show_32px.png"))); // NOI18N
@@ -292,6 +345,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         );
 
         jPanel9.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel9MouseClicked(evt);
+            }
+        });
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/electrocasnice/icons8_monitor_32px.png"))); // NOI18N
@@ -364,9 +422,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 .addGap(528, 528, 528))
         );
 
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel10.setToolTipText("");
-        jPanel10.setEnabled(false);
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jLabel19.setText("Clasa energetica:");
 
         jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+++", "A+", "B" }));
@@ -395,9 +452,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jCheckBox3.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jCheckBox3.setText("Kit Instalare Inclus");
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jLabel19.setText("Clasa energetica:");
-
         jButton1.setText("Acceptati");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -405,33 +459,35 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jComboBox2, 0, 109, Short.MAX_VALUE)
-                        .addGap(420, 420, 420))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jTextField2.setEditable(false);
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField2.setOpaque(false);
+
+        javax.swing.GroupLayout AerConditionatLayout = new javax.swing.GroupLayout(AerConditionat);
+        AerConditionat.setLayout(AerConditionatLayout);
+        AerConditionatLayout.setHorizontalGroup(
+            AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AerConditionatLayout.createSequentialGroup()
+                .addContainerGap(680, Short.MAX_VALUE)
+                .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AerConditionatLayout.createSequentialGroup()
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1)
-                            .addComponent(jCheckBox3))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jCheckBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38))
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(103, 103, 103)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        AerConditionatLayout.setVerticalGroup(
+            AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AerConditionatLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -440,9 +496,180 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 .addComponent(jCheckBox2)
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox3)
-                .addGap(18, 18, 18)
+                .addGap(23, 23, 23)
                 .addComponent(jButton1)
-                .addContainerGap(654, Short.MAX_VALUE))
+                .addGap(151, 151, 151)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(173, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout CaloriferLayout = new javax.swing.GroupLayout(Calorifer);
+        Calorifer.setLayout(CaloriferLayout);
+        CaloriferLayout.setHorizontalGroup(
+            CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1315, Short.MAX_VALUE)
+        );
+        CaloriferLayout.setVerticalGroup(
+            CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 636, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout FierDeCalcatLayout = new javax.swing.GroupLayout(FierDeCalcat);
+        FierDeCalcat.setLayout(FierDeCalcatLayout);
+        FierDeCalcatLayout.setHorizontalGroup(
+            FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1315, Short.MAX_VALUE)
+        );
+        FierDeCalcatLayout.setVerticalGroup(
+            FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 631, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout UscatorDeParLayout = new javax.swing.GroupLayout(UscatorDePar);
+        UscatorDePar.setLayout(UscatorDeParLayout);
+        UscatorDeParLayout.setHorizontalGroup(
+            UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1315, Short.MAX_VALUE)
+        );
+        UscatorDeParLayout.setVerticalGroup(
+            UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 618, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout MasinaDeSpalatRufeLayout = new javax.swing.GroupLayout(MasinaDeSpalatRufe);
+        MasinaDeSpalatRufe.setLayout(MasinaDeSpalatRufeLayout);
+        MasinaDeSpalatRufeLayout.setHorizontalGroup(
+            MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1315, Short.MAX_VALUE)
+        );
+        MasinaDeSpalatRufeLayout.setVerticalGroup(
+            MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 618, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout MasinaDeSpalatVaseLayout = new javax.swing.GroupLayout(MasinaDeSpalatVase);
+        MasinaDeSpalatVase.setLayout(MasinaDeSpalatVaseLayout);
+        MasinaDeSpalatVaseLayout.setHorizontalGroup(
+            MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 651, Short.MAX_VALUE)
+        );
+        MasinaDeSpalatVaseLayout.setVerticalGroup(
+            MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 627, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout TelevizorLayout = new javax.swing.GroupLayout(Televizor);
+        Televizor.setLayout(TelevizorLayout);
+        TelevizorLayout.setHorizontalGroup(
+            TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 651, Short.MAX_VALUE)
+        );
+        TelevizorLayout.setVerticalGroup(
+            TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 636, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout MonitorLayout = new javax.swing.GroupLayout(Monitor);
+        Monitor.setLayout(MonitorLayout);
+        MonitorLayout.setHorizontalGroup(
+            MonitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 647, Short.MAX_VALUE)
+        );
+        MonitorLayout.setVerticalGroup(
+            MonitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 639, Short.MAX_VALUE)
+        );
+
+        jLayeredPane1.setLayer(AerConditionat, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(Calorifer, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(FierDeCalcat, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(UscatorDePar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(MasinaDeSpalatRufe, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(MasinaDeSpalatVase, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(Televizor, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(Monitor, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
+        jLayeredPane1.setLayout(jLayeredPane1Layout);
+        jLayeredPane1Layout.setHorizontalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addComponent(AerConditionat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(5, 5, 5)
+                    .addComponent(Calorifer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(5, 5, 5)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(5, 5, 5)
+                    .addComponent(FierDeCalcat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(5, 5, 5)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(5, 5, 5)
+                    .addComponent(UscatorDePar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(5, 5, 5)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(5, 5, 5)
+                    .addComponent(MasinaDeSpalatRufe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(5, 5, 5)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(4, 4, 4)
+                    .addComponent(MasinaDeSpalatVase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(670, Short.MAX_VALUE)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(7, 7, 7)
+                    .addComponent(Televizor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(667, Short.MAX_VALUE)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(Monitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(668, Short.MAX_VALUE)))
+        );
+        jLayeredPane1Layout.setVerticalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(AerConditionat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(Calorifer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(FierDeCalcat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(16, 16, 16)
+                    .addComponent(UscatorDePar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(22, Short.MAX_VALUE)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(16, 16, 16)
+                    .addComponent(MasinaDeSpalatRufe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(22, Short.MAX_VALUE)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(12, 12, 12)
+                    .addComponent(MasinaDeSpalatVase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(17, Short.MAX_VALUE)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(7, 7, 7)
+                    .addComponent(Televizor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(7, 7, 7)
+                    .addComponent(Monitor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout backroundLayout = new javax.swing.GroupLayout(backround);
@@ -452,15 +679,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(backroundLayout.createSequentialGroup()
                 .addComponent(sidepanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         backroundLayout.setVerticalGroup(
             backroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sidepanel, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(sidepanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1003, Short.MAX_VALUE)
             .addGroup(backroundLayout.createSequentialGroup()
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 64, Short.MAX_VALUE))
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -478,41 +705,73 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
-         jPanel10.setVisible(true);
+        AerConditionat.setVisible(true);
+        setPanelInVisible(AerConditionat);
     }//GEN-LAST:event_jPanel2MouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        boolean uzCasnic = jCheckBox1.isSelected();
-        boolean wifi = jCheckBox2.isSelected();
-        boolean kitInstalare = jCheckBox3.isSelected();
-        AerConditionat[] varReinc = new AerConditionat[4];
-
-        for(int x=0;x<4;x++) {
-        
-        if(cte.a[x].UzCasnic == uzCasnic){
-          varReinc[x] = cte.a[x];
-        }
-        
-        if(varReinc[x].wifi == wifi){
-            System.out.println(varReinc[x]);
-        }
-        //System.out.println(varReinc[x]);
-        }
-              
-
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        boolean uzCasnic = jCheckBox1.isSelected();
+        boolean wifi = jCheckBox2.isSelected();
+        boolean kitInstalare = jCheckBox3.isSelected();
+        var clasa = jComboBox2.getSelectedItem();
+
+        //    ArrayList<JPanel> studentInfo = new ArrayList<JPanel>();
+        for(int x=0;x<4;x++) {
+            if(cte.a[x].UzCasnic == uzCasnic && cte.a[x].wifi == wifi && cte.a[x].kitInstalare == kitInstalare
+                && cte.a[x].EficientaEnergetica == clasa){
+                jTextField2.setText(cte.a[x].toString());
+            } else {
+                jTextField2.setText("Nothing matches the selected filters");
+            }
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        Calorifer.setVisible(true);
+        setPanelInVisible(Calorifer);
+    }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        FierDeCalcat.setVisible(true);
+        setPanelInVisible(FierDeCalcat);
+    }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+        UscatorDePar.setVisible(true);
+        setPanelInVisible(UscatorDePar);
+    }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
+        MasinaDeSpalatRufe.setVisible(true);
+        setPanelInVisible(MasinaDeSpalatRufe);
+    }//GEN-LAST:event_jPanel6MouseClicked
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+        MasinaDeSpalatVase.setVisible(true);
+        setPanelInVisible(MasinaDeSpalatVase);
+    }//GEN-LAST:event_jPanel7MouseClicked
+
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+        Televizor.setVisible(true);
+        setPanelInVisible(Televizor);
+    }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
+        Monitor.setVisible(true);
+        setPanelInVisible(Monitor);
+    }//GEN-LAST:event_jPanel9MouseClicked
 
     
     /**
@@ -554,6 +813,14 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AerConditionat;
+    private javax.swing.JPanel Calorifer;
+    private javax.swing.JPanel FierDeCalcat;
+    private javax.swing.JPanel MasinaDeSpalatRufe;
+    private javax.swing.JPanel MasinaDeSpalatVase;
+    private javax.swing.JPanel Monitor;
+    private javax.swing.JPanel Televizor;
+    private javax.swing.JPanel UscatorDePar;
     private javax.swing.JPanel backround;
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
@@ -578,7 +845,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel10;
+    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -588,6 +855,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel sidepanel;
     // End of variables declaration//GEN-END:variables
 }
