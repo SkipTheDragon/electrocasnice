@@ -47,7 +47,7 @@ public class Televizor extends Electrocasnice {
        this.OLED=t.OLED;
     }
     public String toString(){
-        return super.toString()+" \n\t Diagonala televizorului este de "+Diagonala+" cm."+(smart?"Cu":"Fara")+" functie smart, "+(UHD?"cu":"fara")+" rezolutie UHD. Televizorul este curbat? "+(Curbat?"da":"nu")+"Televizorul este OLED? "+(OLED?"da":"nu");
+        return "Diagonala televizorului este de "+Diagonala+" cm. "+(smart?"Cu":"Fara")+" functie smart, "+(UHD?"cu":"fara")+" rezolutie UHD. Televizor curbat: "+(Curbat?"da":"nu")+", Televizorul OLED: "+(OLED?"da.":"nu.");
     }
     }
 

@@ -575,6 +575,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(AerConditionatLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 865, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(AerConditionatLayout.createSequentialGroup()
                         .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
@@ -588,9 +589,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jCheckBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1155, Short.MAX_VALUE))
+                                .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(887, Short.MAX_VALUE))
         );
         AerConditionatLayout.setVerticalGroup(
             AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -658,8 +658,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("jTextField1");
-
         javax.swing.GroupLayout CaloriferLayout = new javax.swing.GroupLayout(Calorifer);
         Calorifer.setLayout(CaloriferLayout);
         CaloriferLayout.setHorizontalGroup(
@@ -667,7 +665,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(CaloriferLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addGroup(CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 714, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(CaloriferLayout.createSequentialGroup()
                             .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -686,8 +683,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2)
-                            .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(1041, Short.MAX_VALUE))
+                            .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(865, Short.MAX_VALUE))
         );
         CaloriferLayout.setVerticalGroup(
             CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -756,8 +754,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField3.setText("jTextField3");
-
         javax.swing.GroupLayout FierDeCalcatLayout = new javax.swing.GroupLayout(FierDeCalcat);
         FierDeCalcat.setLayout(FierDeCalcatLayout);
         FierDeCalcatLayout.setHorizontalGroup(
@@ -765,7 +761,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(FierDeCalcatLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addGroup(FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 712, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 899, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(FierDeCalcatLayout.createSequentialGroup()
                         .addGroup(FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -782,7 +778,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox8, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(1030, Short.MAX_VALUE))
+                .addContainerGap(843, Short.MAX_VALUE))
         );
         FierDeCalcatLayout.setVerticalGroup(
             FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -857,8 +853,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField7.setText("jTextField7");
-
         javax.swing.GroupLayout UscatorDeParLayout = new javax.swing.GroupLayout(UscatorDePar);
         UscatorDePar.setLayout(UscatorDeParLayout);
         UscatorDeParLayout.setHorizontalGroup(
@@ -866,7 +860,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(UscatorDeParLayout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addGroup(UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 751, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 917, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(UscatorDeParLayout.createSequentialGroup()
                         .addGroup(UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -883,7 +877,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox11, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox10, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox9, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(994, Short.MAX_VALUE))
+                .addContainerGap(828, Short.MAX_VALUE))
         );
         UscatorDeParLayout.setVerticalGroup(
             UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -965,7 +959,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(MasinaDeSpalatRufeLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 919, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MasinaDeSpalatRufeLayout.createSequentialGroup()
                         .addGroup(MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -982,7 +976,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox14, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox15, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(1033, Short.MAX_VALUE))
+                .addContainerGap(840, Short.MAX_VALUE))
         );
         MasinaDeSpalatRufeLayout.setVerticalGroup(
             MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1055,8 +1049,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField5.setText("jTextField5");
-
         javax.swing.GroupLayout MasinaDeSpalatVaseLayout = new javax.swing.GroupLayout(MasinaDeSpalatVase);
         MasinaDeSpalatVase.setLayout(MasinaDeSpalatVaseLayout);
         MasinaDeSpalatVaseLayout.setHorizontalGroup(
@@ -1064,7 +1056,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(MasinaDeSpalatVaseLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField5)
                     .addGroup(MasinaDeSpalatVaseLayout.createSequentialGroup()
                         .addGroup(MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1080,8 +1072,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox18, 0, 79, Short.MAX_VALUE)
                                 .addComponent(jComboBox17, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox19, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox20, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(126, Short.MAX_VALUE))
+                                .addComponent(jComboBox20, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 775, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         MasinaDeSpalatVaseLayout.setVerticalGroup(
             MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1147,8 +1140,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField6.setText("jTextField6");
-
         javax.swing.GroupLayout TelevizorLayout = new javax.swing.GroupLayout(Televizor);
         Televizor.setLayout(TelevizorLayout);
         TelevizorLayout.setHorizontalGroup(
@@ -1156,7 +1147,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(TelevizorLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 776, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 931, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(TelevizorLayout.createSequentialGroup()
                         .addGroup(TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1173,7 +1164,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                             .addComponent(jCheckBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(329, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
         TelevizorLayout.setVerticalGroup(
             TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1240,7 +1231,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField8.setText("jTextField8");
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField8ActionPerformed(evt);
@@ -1272,10 +1262,10 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox26, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(MonitorLayout.createSequentialGroup()
                         .addGap(55, 55, 55)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 926, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         MonitorLayout.setVerticalGroup(
             MonitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

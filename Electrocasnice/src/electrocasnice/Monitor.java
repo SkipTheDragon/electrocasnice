@@ -49,6 +49,6 @@ public class Monitor extends Electrocasnice {
        this.Gaming=m.Gaming;
     }
     public String toString(){
-        return super.toString()+" \n\t Diagonala monitorului este de "+Diagonala+"cm. Ultra Wide: "+(UltraWide?"da":"nu")+"; "+(UHD?"cu":"fara")+" rezolutie UHD. Rata de refresh este de "+RataRefresh+" Hz. Monitorul este curbat? "+(Curbat?"da":"nu")+"Monitorul este de gaming? "+(Gaming?"da":"nu");
+        return "Diagonala monitorului este de "+Diagonala+"cm. Ultra Wide: "+(UltraWide?"da":"nu")+", "+(UHD?"cu":"fara")+" rezolutie UHD. Rata de refresh este de "+RataRefresh+" Hz. Monitorul curbat: "+(Curbat?"da":"nu")+", Monitorul gaming "+(Gaming?"da.":"nu.");
     }
 }

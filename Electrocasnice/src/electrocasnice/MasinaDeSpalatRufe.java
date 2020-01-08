@@ -53,6 +53,6 @@ public class MasinaDeSpalatRufe extends Electrocasnice {
 
     }
     public String toString(){
-        return super.toString()+" \n\t Culoare: "+culoare+"; Zgomot spalare "+zgomotSpalare+" db; Zgomot centrifugare: "+zgomotCentrifugare+" db; Rotatii: "+rotatii+" RPM; Greutate:"+greutate+";Consum apa anual:"+consumApa;
+        return "Culoare: "+culoare+", Zgomot spalare "+zgomotSpalare+" db, Zgomot centrifugare: "+zgomotCentrifugare+" db, Rotatii: "+rotatii+" RPM, Greutate:"+greutate+", Consum apa anual:"+consumApa+".";
     }
 }

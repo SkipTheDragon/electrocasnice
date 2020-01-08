@@ -54,7 +54,7 @@ FierDeCalcat(FierDeCalcat f){
         this.AutoCuratare=f.AutoCuratare;
 }
 public String toString(){
-        return super.toString()+" \n\t Culoare "+Culoare+" cu talpa "+Talpa+", cu jet de aburi "+Jet_De_Abur+", putere de: "+Putere+" W, "+(AutoCuratare?"cu":"fara")+" functie de Autocuratare si Tensiune de:"+Tensiune+"V.";   
+        return "Culoare "+Culoare+" cu talpa "+Talpa+", jet de aburi "+Jet_De_Abur+", putere de: "+Putere+" W, "+(AutoCuratare?"cu":"fara")+" functie de Autocuratare si Tensiune de: "+Tensiune+"V.";   
 }
 }
 
