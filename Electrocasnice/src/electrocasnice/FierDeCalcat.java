@@ -24,7 +24,7 @@ public class FierDeCalcat extends Electrocasnice{
         AutoCuratare=true;
     }
     
-    FierDeCalcat(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, String Talpa, String Culoare, int Putere, int Jet_De_Abur, int Tensiune, boolean AutoCuratare){
+    FierDeCalcat(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, String Talpa, String Culoare, int Putere, int Tensiune, int Jet_De_Abur, boolean AutoCuratare){
         super(Producator, EficientaEnergetica, P, UzCasnic);
         this.Culoare=Culoare;
         this.Talpa=Talpa;
@@ -34,7 +34,7 @@ public class FierDeCalcat extends Electrocasnice{
         this.AutoCuratare=AutoCuratare;
 }
     
-FierDeCalcat(Electrocasnice e, String Talpa, String Culoare, int Putere, int Jet_De_Abur, boolean AutoCuratare){
+FierDeCalcat(Electrocasnice e, String Talpa, String Culoare, int Putere,int Tensiune, int Jet_De_Abur, boolean AutoCuratare){
         super(e);
         this.Culoare=Culoare;
         this.Talpa=Talpa;

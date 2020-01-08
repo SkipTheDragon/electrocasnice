@@ -26,7 +26,7 @@ public class MasinaDeSpalatVase extends Electrocasnice {
         programNum= 10;
         nivelZgomort= 36;
         energyConsumptionPerCycle =  0.92;
-        Culoare="Alba";
+        Culoare= "Alba";
         greutate = 9;
         consumApa = 54484;
     }

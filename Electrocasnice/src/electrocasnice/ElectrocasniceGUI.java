@@ -5,25 +5,32 @@
  */
 package electrocasnice;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 /**
  *
  * @author DELL
  */
 
-import java.awt.Color;
-import javax.swing.ImageIcon;
-import java.awt.Image;
-import javax.imageio.ImageIO;
-import java.util.*;  
-import java.util.ArrayList;
-import javax.swing.JPanel;
+
 
 
 public class ElectrocasniceGUI extends javax.swing.JFrame {
     ClasaTestElectrocasnice cte;
-    /**
-     * Creates new form ElectrocasniceGUI
-     */
+
+        public void song() {
+             try{
+            AudioInputStream audioInputStream =AudioSystem.getAudioInputStream(getClass().getResource("audio.wav"));
+           Clip clip = AudioSystem.getClip();
+           clip.open(audioInputStream);
+                clip.start( );
+                    }
+             catch(Exception ex)
+             { ex.printStackTrace();}
+    }
+        
             javax.swing.JPanel[] panelArray = new javax.swing.JPanel[8];
 
     public void setPanelInVisible(javax.swing.JPanel obiect) {
@@ -645,6 +652,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButton2.setText("Acceptati");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
 
         jTextField1.setText("jTextField1");
 
@@ -738,6 +750,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButton3.setText("Acceptati");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
         jTextField3.setText("jTextField3");
 
@@ -829,6 +846,16 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButton4.setText("Acceptati");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jButton4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton4KeyPressed(evt);
+            }
+        });
 
         jTextField7.setText("jTextField7");
 
@@ -907,21 +934,29 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Arctic", "Bosch", "Samsung" }));
 
         jComboBox13.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "900", "1000", "1600" }));
+        jComboBox13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox13ActionPerformed(evt);
+            }
+        });
 
         jComboBox14.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "50", "54", "55" }));
 
         jComboBox15.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "7", "9", "15" }));
 
         jComboBox16.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "45", "49", "56" }));
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButton5.setText("Acceptati");
-
-        jTextField4.setText("jTextField4");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout MasinaDeSpalatRufeLayout = new javax.swing.GroupLayout(MasinaDeSpalatRufe);
         MasinaDeSpalatRufe.setLayout(MasinaDeSpalatRufeLayout);
@@ -998,7 +1033,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Samsung", "Bosch", "Stalgast" }));
 
         jComboBox19.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "32", "42", "58" }));
+        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "14", "13", "120", " " }));
 
         jComboBox20.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alb", "Negru" }));
@@ -1014,6 +1049,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButton6.setText("Acceptati");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
 
         jTextField5.setText("jTextField5");
 
@@ -1077,7 +1117,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jLabel43.setText("Producator:");
 
         jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jLabel44.setText("Diagonala: ");
+        jLabel44.setText("Clasa");
 
         jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel45.setText("Smart:");
@@ -1096,6 +1136,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
 
         jButton7.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButton7.setText("Acceptati");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -1185,12 +1230,22 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jComboBox25.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A++", "C" }));
 
         jComboBox26.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "60", "90", "75" }));
 
         jButton8.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButton8.setText("Acceptati");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
 
         jTextField8.setText("jTextField8");
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout MonitorLayout = new javax.swing.GroupLayout(Monitor);
         Monitor.setLayout(MonitorLayout);
@@ -1477,6 +1532,176 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+       
+        String producator = String .valueOf(jComboBox1.getSelectedItem());
+        int putere = Integer.parseInt(jComboBox3.getSelectedItem().toString());
+        int elementi = Integer.parseInt(jComboBox4.getSelectedItem().toString());
+        boolean uzcasnic = jCheckBox4.isSelected();
+        
+        for(int x=0;x<4;x++) {
+            if(cte.c[x].Producator.equals(producator)){
+                if(cte.c[x].Putere == putere 
+                    && cte.c[x].nrElementi == elementi
+                    && cte.c[x].UzCasnic == uzcasnic){
+                    jTextField1.setText(cte.c[x].toString());
+                } else {
+                    jTextField1.setText("Nothing matches the selected filters");
+                }
+            }
+        }
+        
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        
+        String producator = String .valueOf(jComboBox5.getSelectedItem());
+        int putere = Integer.parseInt(jComboBox6.getSelectedItem().toString());
+        int jet = Integer.parseInt(jComboBox7.getSelectedItem().toString());
+        String material = jComboBox8.getSelectedItem().toString();
+        boolean autocuratare = jCheckBox5.isSelected();
+
+        for(int x=0;x<4;x++) {
+            if(cte.f[x].Producator.equals(producator) && cte.f[x].Talpa.equals(material)){
+                if(cte.f[x].Putere == putere 
+                    && cte.f[x].Jet_De_Abur == jet
+                    && cte.f[x].AutoCuratare == autocuratare){
+
+                    jTextField3.setText(cte.f[x].toString());
+                } else {
+                    jTextField3.setText("Nothing matches the selected filters");
+                }
+            }
+        }
+        
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton4KeyPressed
+
+    }//GEN-LAST:event_jButton4KeyPressed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        String producator = String .valueOf(jComboBox9.getSelectedItem());
+        int putere = Integer.parseInt(jComboBox10.getSelectedItem().toString());
+        int viteza = Integer.parseInt(jComboBox11.getSelectedItem().toString());
+
+        boolean aer_rece = jCheckBox6.isSelected();
+        boolean volum = jCheckBox7.isSelected();
+
+        for(int x=0;x<4;x++) {
+            if(cte.u[x].Producator.equals(producator)){
+                if(cte.u[x].Putere == putere 
+                    && cte.u[x].TrepteDeViteza == viteza
+                    && cte.u[x].TreaptaDeAerRece == aer_rece
+                    && cte.u[x].DifuzorDeVolum == volum){
+
+                    jTextField7.setText(cte.u[x].toString());
+                } else {
+                    jTextField7.setText("Nothing matches the selected filters");
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        String producator = String .valueOf(jComboBox12.getSelectedItem());
+        int viteza = Integer.parseInt(jComboBox13.getSelectedItem().toString());
+        int zgomot = Integer.parseInt(jComboBox14.getSelectedItem().toString());
+        int greutate = Integer.parseInt(jComboBox15.getSelectedItem().toString());
+        int consum = Integer.parseInt(jComboBox16.getSelectedItem().toString());
+
+
+        for(int x=0;x<4;x++) {
+            if(cte.r[x].Producator.equals(producator)){
+                if(cte.r[x].rotatii == viteza 
+                    && cte.r[x].zgomotSpalare == zgomot
+                    && cte.r[x].greutate == greutate
+                    && cte.r[x].consumApa == consum){
+                    jTextField4.setText(cte.r[x].toString());
+                } else {
+                    jTextField4.setText("Nothing matches the selected filters");
+                }
+            }
+        }
+        
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jComboBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox13ActionPerformed
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        String producator = String .valueOf(jComboBox18.getSelectedItem());
+        String clasa = String .valueOf(jComboBox17.getSelectedItem());
+        int sloturi = Integer.parseInt(jComboBox19.getSelectedItem().toString());
+        String culoare = String .valueOf(jComboBox20.getSelectedItem());
+        boolean uz = jCheckBox8.isSelected();
+
+
+
+        for(int x=0;x<4;x++) {
+            if(cte.v[x].Producator.equals(producator) && cte.v[x].EficientaEnergetica.equals(clasa)
+                    && cte.v[x].Culoare.equals(culoare)){
+                System.out.println(cte.v[x].sloturiVase == sloturi);
+                if(cte.v[x].UzCasnic == uz
+                    && cte.v[x].sloturiVase == sloturi){
+                    jTextField5.setText(cte.v[x].toString());
+                } else {
+                    jTextField5.setText("Nothing matches the selected filters");
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        String producator = String .valueOf(jComboBox21.getSelectedItem());
+        String clasa = String .valueOf(jComboBox22.getSelectedItem());
+        boolean smart = jCheckBox9.isSelected();
+        boolean uhd  = jCheckBox10.isSelected();
+        boolean oled = jCheckBox11.isSelected();
+
+
+
+        for(int x=0;x<4;x++) {
+            if(cte.t[x].Producator.equals(producator) && cte.t[x].EficientaEnergetica.equals(clasa)){
+                if( cte.t[x].smart == smart
+                    && cte.t[x].UHD == uhd
+                    && cte.t[x].OLED == oled){
+                    jTextField6.setText(cte.t[x].toString());
+                } else {
+                    jTextField6.setText("Nothing matches the selected filters");
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        String producator = String .valueOf(jComboBox23.getSelectedItem());
+        String clasa = String .valueOf(jComboBox25.getSelectedItem());
+        int Diagonala = Integer.parseInt(jComboBox24.getSelectedItem().toString());
+        int refresh = Integer.parseInt(jComboBox26.getSelectedItem().toString());
+        boolean Ultrawide = jCheckBox12.isSelected();
+
+
+
+        for(int x=0;x<4;x++) {
+            if(cte.m[x].Producator.equals(producator) && cte.m[x].EficientaEnergetica.equals(clasa) 
+                    ){
+                if( cte.m[x].RataRefresh == refresh
+                    && cte.m[x].Diagonala == Diagonala
+                    && cte.m[x].UltraWide == Ultrawide){
+                    jTextField8.setText(cte.m[x].toString());
+                } else {
+                    jTextField8.setText("Nothing matches the selected filters");
+                }
+            }
+        }
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
 
     
     /**
