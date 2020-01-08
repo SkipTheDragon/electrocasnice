@@ -61,20 +61,20 @@ public class ClasaTestElectrocasnice {
         t[2]=new Televizor("LG","A++",1999.99f,true,102,true,false,false,false);
         t[3]=new Televizor("Philips","A+++",3999.99f,true,150,true,true,true,true);
         
-        m[0]=new Monitor("Samsung","C",10049.99f,true,80,30,true,true,true,true);
+        m[0]=new Monitor("Samsung","C",1049.99f,true,80,60,true,true,true,true);
         m[1]=new Monitor(e2,120,60,true,false,false,false);
-        m[2]=new Monitor("DELL","A++",1344.99f,false,50,60,false,true,false,false);
-        m[3]=new Monitor("Philips","C",506.99f,true,60,45,false,false,false,false);
+        m[2]=new Monitor("DELL","A++",1344.99f,false,50,90,false,true,false,false);
+        m[3]=new Monitor("Philips","C",506.99f,true,60,60,false,false,false,false);
 
         v[0]=new MasinaDeSpalatVase("Samsung","A++",5000.99f,true,14,32,8,0.54d,"Alb",8,3707);
         v[1]=new MasinaDeSpalatVase(e2,13,49,6,1,"Gri",6,2697);
         v[2]=new MasinaDeSpalatVase("Bosch","A+++",4289.99f,true,13,42,8,0.73d,"Negru",9,3796);
         v[3]=new MasinaDeSpalatVase("Stalgast","B",16350.99f,false,120,58,16,3.4d,"Gri",5,2765);
 
-        r[0]=new MasinaDeSpalatRufe("Arctic","C",2300.99f,true,32,2,54,"Alb",7,8707);
+        r[0]=new MasinaDeSpalatRufe("Arctic","C",2300.99f,true,1000,74,54,"Alb",7,8707);
         r[1]=new MasinaDeSpalatRufe(e2,"Gri",49,6,1,6,2697);
-        r[2]=new MasinaDeSpalatRufe("Bosch","A++",3489.99f,true,42,8,73,"Negru",9,9796);
-        r[3]=new MasinaDeSpalatRufe("Samsung","B",1650.99f,false,58,16,3,"Alb",15,6765);
+        r[2]=new MasinaDeSpalatRufe("Bosch","A++",3489.99f,true,1600,64,50,"Negru",9,9796);
+        r[3]=new MasinaDeSpalatRufe("Samsung","B",1650.99f,false,900,76,55,"Alb",15,6765);
               
         /* for(int x=0;x<4;x++) {
                 System.out.println(a[x]);
