@@ -62,6 +62,6 @@ public class AerConditionat extends Electrocasnice{
     
     public String toString(){
         String newline = System.getProperty("line.separator");
-        return "Capacitatea aerului conditionat este de "+Capacitate+"BTU, Nivelul de zgomot al unitatii interne este de "+NivelZgomot+"dB, Functie WiFi: "+(wifi?"Da, ":"Nu, ")+"Kit instalare inclus in pachet: "+(kitInstalare?"Da, ":"Nu, ")+"Portabil: "+(Portabil?"Da.":"Nu.");
+        return super.toString()+" Capacitatea aerului conditionat este de "+Capacitate+"BTU \n Nivelul de zgomot al unitatii interne este de "+NivelZgomot+"dB \n Functie WiFi: "+(wifi?"Da \n ":"Nu \n ")+"Kit instalare inclus in pachet: "+(kitInstalare?"Da \n ":"Nu \n ")+"Portabil: "+(Portabil?"Da":"Nu");
     }
 }

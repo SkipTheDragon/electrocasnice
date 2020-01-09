@@ -49,6 +49,6 @@ public class Electrocasnice {
     //metoda toString pentru a putea afisa obiectul.
     
     public String toString(){
-        return "Electrocasnic "+Producator+" "+EficientaEnergetica+" "+Pret+" lei \n\t Uz Casnic "+(UzCasnic?"da":"nu");
+        return "Electrocasnic "+Producator+" "+EficientaEnergetica+" "+Pret+" lei, Uz Casnic "+(UzCasnic?"da \n":"nu \n");
     }
 }
