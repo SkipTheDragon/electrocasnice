@@ -5,44 +5,42 @@
  */
 package electrocasnice;
 
+import java.awt.Color;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.JTextField;
+import java.awt.Component;
 /**
  *
  * @author DELL
  */
-
-
-
-
 public class ElectrocasniceGUI extends javax.swing.JFrame {
     ClasaTestElectrocasnice cte;
 
-        public void song() {
-             try{
-            AudioInputStream audioInputStream =AudioSystem.getAudioInputStream(getClass().getResource("audio.wav"));
+    public void song() {
+        try{
+           AudioInputStream audioInputStream =AudioSystem.getAudioInputStream(getClass().getResource("audio.wav"));
            Clip clip = AudioSystem.getClip();
            clip.open(audioInputStream);
-                clip.start( );
-                    }
-             catch(Exception ex)
-             { ex.printStackTrace();}
+           clip.start( );
+        } catch(Exception ex){ ex.printStackTrace();}
     }
         
-            javax.swing.JPanel[] panelArray = new javax.swing.JPanel[8];
+   javax.swing.JPanel[] panelArray = new javax.swing.JPanel[8];
 
     public void setPanelInVisible(javax.swing.JPanel obiect) {
         for(int i=0;i<8;i++) {
-            if(panelArray[i].isVisible() == true && panelArray[i] != obiect) panelArray[i].setVisible(false);
+            if(panelArray[i].isVisible() == true && panelArray[i] != obiect) {
+                panelArray[i].setVisible(false);
+        }
         }
     }
     
+    //
     public ElectrocasniceGUI() {
         initComponents();
         cte=new ClasaTestElectrocasnice();
-        
+
         panelArray[0] = AerConditionat;
         panelArray[1] = Calorifer;
         panelArray[2] = FierDeCalcat;
@@ -95,6 +93,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jButton9 = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         AerConditionat = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
@@ -108,6 +107,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jLabel50 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel57 = new javax.swing.JLabel();
         Calorifer = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -118,7 +118,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jComboBox4 = new javax.swing.JComboBox<>();
         jCheckBox4 = new javax.swing.JCheckBox();
         jButton2 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel58 = new javax.swing.JLabel();
         FierDeCalcat = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -131,7 +133,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jComboBox8 = new javax.swing.JComboBox<>();
         jCheckBox5 = new javax.swing.JCheckBox();
         jButton3 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jLabel59 = new javax.swing.JLabel();
         UscatorDePar = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
@@ -144,7 +148,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jCheckBox6 = new javax.swing.JCheckBox();
         jCheckBox7 = new javax.swing.JCheckBox();
         jButton4 = new javax.swing.JButton();
-        jTextField7 = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jLabel61 = new javax.swing.JLabel();
         MasinaDeSpalatRufe = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
@@ -157,7 +163,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jComboBox15 = new javax.swing.JComboBox<>();
         jComboBox16 = new javax.swing.JComboBox<>();
         jButton5 = new javax.swing.JButton();
-        jTextField4 = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+        jLabel60 = new javax.swing.JLabel();
         MasinaDeSpalatVase = new javax.swing.JPanel();
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -170,7 +178,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jLabel42 = new javax.swing.JLabel();
         jCheckBox8 = new javax.swing.JCheckBox();
         jButton6 = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTextArea7 = new javax.swing.JTextArea();
+        jLabel62 = new javax.swing.JLabel();
         Televizor = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
@@ -183,7 +193,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jCheckBox10 = new javax.swing.JCheckBox();
         jCheckBox11 = new javax.swing.JCheckBox();
         jButton7 = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jTextArea8 = new javax.swing.JTextArea();
+        jLabel63 = new javax.swing.JLabel();
         Monitor = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
@@ -197,7 +209,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jComboBox26 = new javax.swing.JComboBox<>();
         jCheckBox12 = new javax.swing.JCheckBox();
         jButton8 = new javax.swing.JButton();
-        jTextField8 = new javax.swing.JTextField();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextArea6 = new javax.swing.JTextArea();
+        jLabel64 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -471,6 +485,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jButton9.setText("jButton9");
+
         javax.swing.GroupLayout sidepanelLayout = new javax.swing.GroupLayout(sidepanel);
         sidepanel.setLayout(sidepanelLayout);
         sidepanelLayout.setHorizontalGroup(
@@ -484,10 +500,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(sidepanelLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
                 .addGroup(sidepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(sidepanelLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(sidepanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(sidepanelLayout.createSequentialGroup()
+                        .addGap(91, 91, 91)
+                        .addComponent(jButton9)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         sidepanelLayout.setVerticalGroup(
@@ -513,7 +534,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(528, 528, 528))
+                .addGap(35, 35, 35)
+                .addComponent(jButton9)
+                .addGap(472, 472, 472))
         );
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -570,6 +593,10 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        jLabel57.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setText("Aer Conditionat");
+
         javax.swing.GroupLayout AerConditionatLayout = new javax.swing.GroupLayout(AerConditionat);
         AerConditionat.setLayout(AerConditionatLayout);
         AerConditionatLayout.setHorizontalGroup(
@@ -577,29 +604,34 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(AerConditionatLayout.createSequentialGroup()
                 .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AerConditionatLayout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
-                            .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(31, 31, 31)
-                        .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
-                            .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jCheckBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(AerConditionatLayout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1377, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(AerConditionatLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(AerConditionatLayout.createSequentialGroup()
+                                .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                                    .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(31, 31, 31)
+                                .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton1)
+                                    .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jCheckBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(1437, Short.MAX_VALUE))
         );
         AerConditionatLayout.setVerticalGroup(
             AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AerConditionatLayout.createSequentialGroup()
-                .addGap(85, 85, 85)
+                .addContainerGap()
+                .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -662,6 +694,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
+        jTextArea2.setColumns(20);
+        jTextArea2.setLineWrap(true);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jLabel58.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setText("Calorifer");
+
         javax.swing.GroupLayout CaloriferLayout = new javax.swing.GroupLayout(Calorifer);
         Calorifer.setLayout(CaloriferLayout);
         CaloriferLayout.setHorizontalGroup(
@@ -669,6 +710,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(CaloriferLayout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addGroup(CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(CaloriferLayout.createSequentialGroup()
                             .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -688,13 +730,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                         .addGroup(CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton2)
                             .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(865, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1481, Short.MAX_VALUE))
         );
         CaloriferLayout.setVerticalGroup(
             CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CaloriferLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
+                .addGap(14, 14, 14)
+                .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(CaloriferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -713,8 +757,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
                 .addGap(41, 41, 41)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(235, Short.MAX_VALUE))
         );
 
         jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -758,6 +802,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
+        jTextArea3.setColumns(20);
+        jTextArea3.setLineWrap(true);
+        jTextArea3.setRows(5);
+        jScrollPane3.setViewportView(jTextArea3);
+
+        jLabel59.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel59.setText("Fier de calcat");
+
         javax.swing.GroupLayout FierDeCalcatLayout = new javax.swing.GroupLayout(FierDeCalcat);
         FierDeCalcat.setLayout(FierDeCalcatLayout);
         FierDeCalcatLayout.setHorizontalGroup(
@@ -765,7 +818,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(FierDeCalcatLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addGroup(FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 899, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(FierDeCalcatLayout.createSequentialGroup()
                         .addGroup(FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -782,12 +836,14 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox8, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(843, Short.MAX_VALUE))
+                .addContainerGap(1460, Short.MAX_VALUE))
         );
         FierDeCalcatLayout.setVerticalGroup(
             FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FierDeCalcatLayout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addContainerGap()
+                .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addGroup(FierDeCalcatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -810,8 +866,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(191, Short.MAX_VALUE))
         );
 
         jLabel28.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -831,6 +887,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
 
         jComboBox9.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Philips", "Remington", "Rowenta" }));
+        jComboBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox9ActionPerformed(evt);
+            }
+        });
 
         jComboBox10.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2200", "2300", "2400" }));
@@ -851,11 +912,25 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 jButton4MouseClicked(evt);
             }
         });
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jButton4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jButton4KeyPressed(evt);
             }
         });
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setLineWrap(true);
+        jTextArea4.setRows(5);
+        jScrollPane4.setViewportView(jTextArea4);
+
+        jLabel61.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jLabel61.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel61.setText("Uscator de par");
 
         javax.swing.GroupLayout UscatorDeParLayout = new javax.swing.GroupLayout(UscatorDePar);
         UscatorDePar.setLayout(UscatorDeParLayout);
@@ -864,7 +939,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(UscatorDeParLayout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addGroup(UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 917, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(UscatorDeParLayout.createSequentialGroup()
                         .addGroup(UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -881,12 +957,14 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox11, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox10, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox9, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(828, Short.MAX_VALUE))
+                .addContainerGap(1448, Short.MAX_VALUE))
         );
         UscatorDeParLayout.setVerticalGroup(
             UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UscatorDeParLayout.createSequentialGroup()
-                .addGap(92, 92, 92)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(UscatorDeParLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -908,9 +986,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     .addComponent(jCheckBox7))
                 .addGap(18, 18, 18)
                 .addComponent(jButton4)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(187, Short.MAX_VALUE))
         );
 
         jLabel33.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -956,6 +1034,14 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
+        jTextArea5.setColumns(20);
+        jTextArea5.setRows(5);
+        jScrollPane5.setViewportView(jTextArea5);
+
+        jLabel60.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel60.setText("Masina de spalat rufe");
+
         javax.swing.GroupLayout MasinaDeSpalatRufeLayout = new javax.swing.GroupLayout(MasinaDeSpalatRufe);
         MasinaDeSpalatRufe.setLayout(MasinaDeSpalatRufeLayout);
         MasinaDeSpalatRufeLayout.setHorizontalGroup(
@@ -963,7 +1049,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(MasinaDeSpalatRufeLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 919, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MasinaDeSpalatRufeLayout.createSequentialGroup()
                         .addGroup(MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -980,12 +1067,14 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox14, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox15, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(840, Short.MAX_VALUE))
+                .addContainerGap(1461, Short.MAX_VALUE))
         );
         MasinaDeSpalatRufeLayout.setVerticalGroup(
             MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MasinaDeSpalatRufeLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(MasinaDeSpalatRufeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1008,8 +1097,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(230, Short.MAX_VALUE))
         );
 
         jLabel38.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -1053,6 +1142,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
+        jTextArea7.setColumns(20);
+        jTextArea7.setLineWrap(true);
+        jTextArea7.setRows(5);
+        jScrollPane7.setViewportView(jTextArea7);
+
+        jLabel62.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jLabel62.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel62.setText("Masina de spalat vase");
+
         javax.swing.GroupLayout MasinaDeSpalatVaseLayout = new javax.swing.GroupLayout(MasinaDeSpalatVase);
         MasinaDeSpalatVase.setLayout(MasinaDeSpalatVaseLayout);
         MasinaDeSpalatVaseLayout.setHorizontalGroup(
@@ -1060,7 +1158,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(MasinaDeSpalatVaseLayout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField5)
+                    .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MasinaDeSpalatVaseLayout.createSequentialGroup()
                         .addGroup(MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1076,14 +1175,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox18, 0, 79, Short.MAX_VALUE)
                                 .addComponent(jComboBox17, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox19, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox20, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(0, 775, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addComponent(jComboBox20, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(702, Short.MAX_VALUE))
         );
         MasinaDeSpalatVaseLayout.setVerticalGroup(
             MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MasinaDeSpalatVaseLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(MasinaDeSpalatVaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1106,8 +1206,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton6)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(231, Short.MAX_VALUE))
         );
 
         jLabel43.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -1144,6 +1244,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
+        jTextArea8.setColumns(20);
+        jTextArea8.setLineWrap(true);
+        jTextArea8.setRows(5);
+        jScrollPane8.setViewportView(jTextArea8);
+
+        jLabel63.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel63.setText("Televizor");
+
         javax.swing.GroupLayout TelevizorLayout = new javax.swing.GroupLayout(Televizor);
         Televizor.setLayout(TelevizorLayout);
         TelevizorLayout.setHorizontalGroup(
@@ -1151,7 +1260,8 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             .addGroup(TelevizorLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 931, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(TelevizorLayout.createSequentialGroup()
                         .addGroup(TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1168,12 +1278,14 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                             .addComponent(jCheckBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jCheckBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(829, Short.MAX_VALUE))
         );
         TelevizorLayout.setVerticalGroup(
             TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TelevizorLayout.createSequentialGroup()
-                .addGap(92, 92, 92)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(TelevizorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1195,9 +1307,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     .addComponent(jCheckBox11))
                 .addGap(18, 18, 18)
                 .addComponent(jButton7)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(289, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(233, Short.MAX_VALUE))
         );
 
         jLabel51.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -1235,20 +1347,24 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
+        jTextArea6.setColumns(20);
+        jTextArea6.setLineWrap(true);
+        jTextArea6.setRows(5);
+        jScrollPane6.setViewportView(jTextArea6);
+
+        jLabel64.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jLabel64.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel64.setText("Monitor");
 
         javax.swing.GroupLayout MonitorLayout = new javax.swing.GroupLayout(Monitor);
         Monitor.setLayout(MonitorLayout);
         MonitorLayout.setHorizontalGroup(
             MonitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MonitorLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
                 .addGroup(MonitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(MonitorLayout.createSequentialGroup()
-                        .addGap(69, 69, 69)
                         .addGroup(MonitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel52, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1265,16 +1381,17 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jComboBox25, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox26, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(MonitorLayout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 926, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(644, 644, 644)
                         .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         MonitorLayout.setVerticalGroup(
             MonitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MonitorLayout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addGap(15, 15, 15)
+                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(MonitorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1301,9 +1418,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                         .addGap(37, 37, 37)
                         .addComponent(jLabel53))
                     .addGroup(MonitorLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(282, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         jLayeredPane1.setLayer(AerConditionat, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1433,6 +1550,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
         AerConditionat.setVisible(true);
         setPanelInVisible(AerConditionat);
+        
     }//GEN-LAST:event_jPanel2MouseClicked
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
@@ -1452,7 +1570,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         boolean wifi = jCheckBox2.isSelected();
         boolean kitInstalare = jCheckBox3.isSelected();
         String clasa = String .valueOf(jComboBox2.getSelectedItem());
-        //    ArrayList<JPanel> studentInfo = new ArrayList<JPanel>();
         for(int x=0;x<4;x++) {
             if(cte.a[x].EficientaEnergetica.equals(clasa)){
                 if(cte.a[x].UzCasnic == uzCasnic && cte.a[x].wifi == wifi && cte.a[x].kitInstalare == kitInstalare){
@@ -1539,9 +1656,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 if(cte.c[x].Putere == putere 
                     && cte.c[x].nrElementi == elementi
                     && cte.c[x].UzCasnic == uzcasnic){
-                    jTextField1.setText(cte.c[x].toString());
+                    jTextArea2.setText(cte.c[x].toString());
                 } else {
-                    jTextField1.setText("Nu au fost gasite rezultate");
+                    jTextArea2.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1562,9 +1679,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     && cte.f[x].Jet_De_Abur == jet
                     && cte.f[x].AutoCuratare == autocuratare){
 
-                    jTextField3.setText(cte.f[x].toString());
+                    jTextArea3.setText(cte.f[x].toString());
                 } else {
-                    jTextField3.setText("Nu au fost gasite rezultate");
+                    jTextArea3.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1590,9 +1707,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     && cte.u[x].TreaptaDeAerRece == aer_rece
                     && cte.u[x].DifuzorDeVolum == volum){
 
-                    jTextField7.setText(cte.u[x].toString());
+                    jTextArea4.setText(cte.u[x].toString());
                 } else {
-                    jTextField7.setText("Nu au fost gasite rezultate");
+                    jTextArea4.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1612,9 +1729,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     && cte.r[x].zgomotSpalare == zgomot
                     && cte.r[x].greutate == greutate
                     && cte.r[x].consumApa == consum){
-                    jTextField4.setText(cte.r[x].toString());
+                    jTextArea5.setText(cte.r[x].toString());
                 } else {
-                    jTextField4.setText("Nu au fost gasite rezultate");
+                    jTextArea5.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1640,9 +1757,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 System.out.println(cte.v[x].sloturiVase == sloturi);
                 if(cte.v[x].UzCasnic == uz
                     && cte.v[x].sloturiVase == sloturi){
-                    jTextField5.setText(cte.v[x].toString());
+                    jTextArea7.setText(cte.v[x].toString());
                 } else {
-                    jTextField5.setText("Nu au fost gasite rezultate");
+                    jTextArea7.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1662,9 +1779,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                 if( cte.t[x].smart == smart
                     && cte.t[x].UHD == uhd
                     && cte.t[x].OLED == oled){
-                    jTextField6.setText(cte.t[x].toString());
+                    jTextArea8.setText(cte.t[x].toString());
                 } else {
-                    jTextField6.setText("Nu au fost gasite rezultate");
+                    jTextArea8.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1677,25 +1794,27 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         int refresh = Integer.parseInt(jComboBox26.getSelectedItem().toString());
         boolean Ultrawide = jCheckBox12.isSelected();
 
-
-
         for(int x=0;x<4;x++) {
             if(cte.m[x].Producator.equals(producator) && cte.m[x].EficientaEnergetica.equals(clasa) 
                     ){
                 if( cte.m[x].RataRefresh == refresh
                     && cte.m[x].Diagonala == Diagonala
                     && cte.m[x].UltraWide == Ultrawide){
-                    jTextField8.setText(cte.m[x].toString());
+                    jTextArea6.setText(cte.m[x].toString());
                 } else {
-                    jTextField8.setText("Nu au fost gasite rezultate");
+                    jTextArea6.setText("Nu au fost gasite rezultate");
                 }
             }
         }
     }//GEN-LAST:event_jButton8MouseClicked
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jComboBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_jComboBox9ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     
     /**
@@ -1754,6 +1873,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
@@ -1844,7 +1964,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -1858,15 +1986,22 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
+    private javax.swing.JTextArea jTextArea6;
+    private javax.swing.JTextArea jTextArea7;
+    private javax.swing.JTextArea jTextArea8;
     private javax.swing.JPanel sidepanel;
     // End of variables declaration//GEN-END:variables
 }
