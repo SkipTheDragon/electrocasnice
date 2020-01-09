@@ -74,6 +74,7 @@ public class MasinaDeSpalatVase extends Electrocasnice {
         //metoda toString pentru a putea afisa obiectul.
     
     public String toString(){
-        return "Numar programe: "+programNum+", Nivelul de zgomot este "+nivelZgomort+", Sloturi pentru vase: "+sloturiVase+", Are un consum de "+energyConsumptionPerCycle+"Kw/h per ciclu, Culoare: "+Culoare+ ",Greutate" +greutate+ "kg, Consum apa anual:"+ consumApa+".";
+        String newline = System.getProperty("line.separator");
+        return super.toString()+"Numar programe: "+programNum+" \n Nivelul de zgomot este "+nivelZgomort+" \n Sloturi pentru vase: "+sloturiVase+" \n Are un consum de "+energyConsumptionPerCycle+"Kw/h per ciclu, Culoare: "+Culoare+ ",Greutate" +greutate+ "kg, Consum apa anual:"+ consumApa+".";
     }
 }

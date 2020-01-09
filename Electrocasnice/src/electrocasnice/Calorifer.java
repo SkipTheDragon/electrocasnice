@@ -51,6 +51,7 @@ public class Calorifer extends Electrocasnice {
     //metoda toString pentru a putea afisa obiectul.
     
     public String toString(){
-        return " Puterea este de "+Putere+"W, Caloriferul are "+nrElementi+" elementi, Culoarea este "+Culoare+".";
+        String newline = System.getProperty("line.separator");
+        return super.toString()+" Puterea este de "+Putere+"W \n Caloriferul are "+nrElementi+" elementi \n Culoarea este "+Culoare+".";
     }
 }

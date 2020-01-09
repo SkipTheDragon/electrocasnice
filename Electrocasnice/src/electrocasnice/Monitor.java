@@ -61,6 +61,7 @@ public class Monitor extends Electrocasnice {
         //metoda toString pentru a putea afisa obiectul.
     
     public String toString(){
-        return "Diagonala monitorului este de "+Diagonala+"cm. Ultra Wide: "+(UltraWide?"da":"nu")+", "+(UHD?"cu":"fara")+" rezolutie UHD. Rata de refresh este de "+RataRefresh+" Hz. Monitorul curbat: "+(Curbat?"da":"nu")+", Monitorul gaming "+(Gaming?"da.":"nu.");
+         String newline = System.getProperty("line.separator");
+        return super.toString()+"Diagonala monitorului este de "+Diagonala+"cm \n Ultra Wide: "+(UltraWide?"da":"nu")+" \n "+(UHD?"cu":"fara")+" rezolutie UHD \n Rata de refresh este de "+RataRefresh+" Hz \n Monitorul curbat: "+(Curbat?"da":"nu")+" \n Monitorul gaming "+(Gaming?"da.":"nu.");
     }
 }

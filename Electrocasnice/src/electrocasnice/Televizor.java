@@ -60,7 +60,8 @@ public class Televizor extends Electrocasnice {
         //metoda toString pentru a putea afisa obiectul.
     
     public String toString(){
-        return "Diagonala televizorului este de "+Diagonala+" cm. "+(smart?"Cu":"Fara")+" functie smart, "+(UHD?"cu":"fara")+" rezolutie UHD. Televizor curbat: "+(Curbat?"da":"nu")+", Televizorul OLED: "+(OLED?"da.":"nu.");
+         String newline = System.getProperty("line.separator");
+         return super.toString()+"Diagonala televizorului este de "+Diagonala+" cm \n "+(smart?"Cu":"Fara")+" functie smart \n "+(UHD?"cu":"fara")+" rezolutie UHD \n Televizor curbat: "+(Curbat?"da":"nu")+" \n Televizorul OLED: "+(OLED?"da.":"nu.");
     }
     }
 

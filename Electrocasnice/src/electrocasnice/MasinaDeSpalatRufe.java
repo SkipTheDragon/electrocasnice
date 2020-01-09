@@ -65,6 +65,7 @@ public class MasinaDeSpalatRufe extends Electrocasnice {
     //metoda toString pentru a putea afisa obiectul.
     
     public String toString(){
-        return "Culoare: "+culoare+", Zgomot spalare "+zgomotSpalare+" db, Zgomot centrifugare: "+zgomotCentrifugare+" db, Rotatii: "+rotatii+" RPM, Greutate:"+greutate+", Consum apa anual:"+consumApa+".";
+         String newline = System.getProperty("line.separator");
+        return super.toString()+"Culoare: "+culoare+" \n Zgomot spalare "+zgomotSpalare+" db \n Zgomot centrifugare: "+zgomotCentrifugare+" db \n Rotatii: "+rotatii+" RPM \n Greutate:"+greutate+" \n Consum apa anual:"+consumApa+".";
     }
 }

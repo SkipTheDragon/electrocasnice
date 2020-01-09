@@ -61,6 +61,7 @@ public class UscatorPar extends Electrocasnice {
         //metoda toString pentru a putea afisa obiectul.
     
     public String toString(){
-    return "Putere de "+Putere+" W, cu "+TrepteDeIncalzire+" trepte de incalzire si "+TrepteDeViteza+" trepte de viteza, "+(TreaptaDeAerRece?"cu":"fara")+" treapta de aer rece, "+(DifuzorDeVolum?"cu":"fara")+" difuzor de volum.";
+        String newline = System.getProperty("line.separator");
+    return super.toString()+"Putere de "+Putere+" W \n cu "+TrepteDeIncalzire+" trepte de incalzire si "+TrepteDeViteza+" trepte de viteza \n "+(TreaptaDeAerRece?"cu":"fara")+" treapta de aer rece \n "+(DifuzorDeVolum?"cu":"fara")+" difuzor de volum.";
 }
 }
