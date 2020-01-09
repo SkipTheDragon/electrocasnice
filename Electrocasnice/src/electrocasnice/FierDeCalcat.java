@@ -67,7 +67,7 @@ FierDeCalcat(FierDeCalcat f){
 
 public String toString(){
     String newline = System.getProperty("line.separator");
-       return super.toString()+"Culoare "+Culoare+" \n cu talpa "+Talpa+" \n jet de aburi "+Jet_De_Abur+" \n putere de: "+Putere+" W \n "+(AutoCuratare?"cu":"fara")+" functie de Autocuratare si Tensiune de: "+Tensiune+"V.";   
+       return super.toString()+"Culoare "+Culoare+" \ncu talpa "+Talpa+" \njet de aburi "+Jet_De_Abur+" \nputere de: "+Putere+" W \n"+(AutoCuratare?"cu":"fara")+" functie de Autocuratare \nTensiune de: "+Tensiune+"V.";   
 }
 }
 
