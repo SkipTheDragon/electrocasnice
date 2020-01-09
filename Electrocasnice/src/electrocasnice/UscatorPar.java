@@ -9,9 +9,14 @@ package electrocasnice;
  *
  * @author Rzvn69
  */
+
+//clasa copil
+
 public class UscatorPar extends Electrocasnice {
     int TrepteDeViteza, TrepteDeIncalzire, Putere;
     boolean TreaptaDeAerRece, DifuzorDeVolum;
+    
+    //constructor fara parametri
     
     UscatorPar(){
     super();
@@ -21,6 +26,11 @@ public class UscatorPar extends Electrocasnice {
     TreaptaDeAerRece=true;
     DifuzorDeVolum=true;
     }
+    
+      //Super se foloseste pentru a apela clasa parinte(Electrocasnice)
+    
+    //constructor cu parametri
+    
     
     UscatorPar(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int TrepteDeViteza, int TrepteDeIncalzire, int Putere, boolean TreaptaDeAerRece, boolean DifuzorDeVolum){
         super(Producator, EficientaEnergetica, P, UzCasnic);
@@ -47,6 +57,8 @@ public class UscatorPar extends Electrocasnice {
     this.TrepteDeViteza=u.TrepteDeViteza;
     this.DifuzorDeVolum=u.DifuzorDeVolum;
     }
+    
+        //metoda toString pentru a putea afisa obiectul.
     
     public String toString(){
     return "Putere de "+Putere+" W, cu "+TrepteDeIncalzire+" trepte de incalzire si "+TrepteDeViteza+" trepte de viteza, "+(TreaptaDeAerRece?"cu":"fara")+" treapta de aer rece, "+(DifuzorDeVolum?"cu":"fara")+" difuzor de volum.";

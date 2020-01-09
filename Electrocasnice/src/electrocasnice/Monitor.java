@@ -9,9 +9,14 @@ package electrocasnice;
  *
  * @author Andrei
  */
+
+//clasa copil
+
 public class Monitor extends Electrocasnice {
         int Diagonala, RataRefresh;
     boolean UltraWide, UHD, Curbat, Gaming;
+    
+    //constructor fara parametri
     
     Monitor(){
     super();
@@ -22,6 +27,10 @@ public class Monitor extends Electrocasnice {
     Curbat=false;
     Gaming=false;
 }
+    
+   //Super se foloseste pentru a apela clasa parinte(Electrocasnice)
+    
+    //constructor cu parametri
     
     Monitor(String Producator, String EficientaEnergetica, float Pret, boolean UzCasnic, int Diagonala, int RataRefresh, boolean UltraWide, boolean UHD, boolean Curbat, boolean Gaming){
        super(Producator, EficientaEnergetica, Pret, UzCasnic);
@@ -48,6 +57,9 @@ public class Monitor extends Electrocasnice {
        this.Curbat=m.Curbat;
        this.Gaming=m.Gaming;
     }
+    
+        //metoda toString pentru a putea afisa obiectul.
+    
     public String toString(){
         return "Diagonala monitorului este de "+Diagonala+"cm. Ultra Wide: "+(UltraWide?"da":"nu")+", "+(UHD?"cu":"fara")+" rezolutie UHD. Rata de refresh este de "+RataRefresh+" Hz. Monitorul curbat: "+(Curbat?"da":"nu")+", Monitorul gaming "+(Gaming?"da.":"nu.");
     }

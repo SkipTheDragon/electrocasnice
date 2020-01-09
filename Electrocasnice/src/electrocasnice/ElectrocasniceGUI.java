@@ -8,7 +8,7 @@ package electrocasnice;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-
+import javax.swing.JTextField;
 /**
  *
  * @author DELL
@@ -103,10 +103,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
         jLabel48 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         Calorifer = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -555,10 +556,6 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setOpaque(false);
-
         jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel48.setText("Uz casnic:");
 
@@ -568,15 +565,19 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         jLabel50.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel50.setText("Kit instalare inclus:");
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout AerConditionatLayout = new javax.swing.GroupLayout(AerConditionat);
         AerConditionat.setLayout(AerConditionatLayout);
         AerConditionatLayout.setHorizontalGroup(
             AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AerConditionatLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
                 .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 865, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(AerConditionatLayout.createSequentialGroup()
+                        .addGap(54, 54, 54)
                         .addGroup(AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                             .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -589,8 +590,11 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                                 .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jCheckBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jComboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(887, Short.MAX_VALUE))
+                                .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(AerConditionatLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(1377, Short.MAX_VALUE))
         );
         AerConditionatLayout.setVerticalGroup(
             AerConditionatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -613,9 +617,9 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     .addComponent(jLabel50))
                 .addGap(23, 23, 23)
                 .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(289, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(260, Short.MAX_VALUE))
         );
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
@@ -1447,15 +1451,15 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
         boolean uzCasnic = jCheckBox1.isSelected();
         boolean wifi = jCheckBox2.isSelected();
         boolean kitInstalare = jCheckBox3.isSelected();
-        var clasa = jComboBox2.getSelectedItem();
-
+        String clasa = String .valueOf(jComboBox2.getSelectedItem());
         //    ArrayList<JPanel> studentInfo = new ArrayList<JPanel>();
         for(int x=0;x<4;x++) {
-            if(cte.a[x].UzCasnic == uzCasnic && cte.a[x].wifi == wifi && cte.a[x].kitInstalare == kitInstalare
-                && cte.a[x].EficientaEnergetica == clasa){
-                jTextField2.setText(cte.a[x].toString());
-            } else {
-                jTextField2.setText("Nothing matches the selected filters");
+            if(cte.a[x].EficientaEnergetica.equals(clasa)){
+                if(cte.a[x].UzCasnic == uzCasnic && cte.a[x].wifi == wifi && cte.a[x].kitInstalare == kitInstalare){
+                    jTextArea1.setText(cte.a[x].toString());
+                } else {
+                    jTextArea1.setText("Nu au fost gasite rezultate");
+                }
             }
         }
     }//GEN-LAST:event_jButton1MouseClicked
@@ -1537,7 +1541,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     && cte.c[x].UzCasnic == uzcasnic){
                     jTextField1.setText(cte.c[x].toString());
                 } else {
-                    jTextField1.setText("Nothing matches the selected filters");
+                    jTextField1.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1560,7 +1564,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
 
                     jTextField3.setText(cte.f[x].toString());
                 } else {
-                    jTextField3.setText("Nothing matches the selected filters");
+                    jTextField3.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1588,7 +1592,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
 
                     jTextField7.setText(cte.u[x].toString());
                 } else {
-                    jTextField7.setText("Nothing matches the selected filters");
+                    jTextField7.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1610,7 +1614,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     && cte.r[x].consumApa == consum){
                     jTextField4.setText(cte.r[x].toString());
                 } else {
-                    jTextField4.setText("Nothing matches the selected filters");
+                    jTextField4.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1638,7 +1642,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     && cte.v[x].sloturiVase == sloturi){
                     jTextField5.setText(cte.v[x].toString());
                 } else {
-                    jTextField5.setText("Nothing matches the selected filters");
+                    jTextField5.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1660,7 +1664,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     && cte.t[x].OLED == oled){
                     jTextField6.setText(cte.t[x].toString());
                 } else {
-                    jTextField6.setText("Nothing matches the selected filters");
+                    jTextField6.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1683,7 +1687,7 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
                     && cte.m[x].UltraWide == Ultrawide){
                     jTextField8.setText(cte.m[x].toString());
                 } else {
-                    jTextField8.setText("Nothing matches the selected filters");
+                    jTextField8.setText("Nu au fost gasite rezultate");
                 }
             }
         }
@@ -1853,9 +1857,10 @@ public class ElectrocasniceGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;

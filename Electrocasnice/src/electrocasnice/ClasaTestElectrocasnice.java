@@ -41,10 +41,10 @@ public class ClasaTestElectrocasnice {
         a[2]=new AerConditionat("Panasonic","A+",1999.90f,true,12000,26,false,false,false);
         a[3]=new AerConditionat("Electrolux","B",799f,true,9000,38,false,false,true);
         
-        c[0]=new Calorifer("AEG","A",409.99f,true,2200,11,"negru");
+        c[0]=new Calorifer("AEG","A",409.99f,true,2200,11,"neagra");
         c[1]=new Calorifer(e2,1500,7,"gri");
-        c[2]=new Calorifer("Heinner","C",239.99f,true,2500,13,"alb");
-        c[3]=new Calorifer("Vortex","C+",249.90f,true,2400,12,"alb");
+        c[2]=new Calorifer("Heinner","C",239.99f,true,2500,13,"alba");
+        c[3]=new Calorifer("Vortex","C+",249.90f,true,2400,12,"alba");
         
         u[0]=new UscatorPar("Philips", "A+++", 238.99f,false,2,3,2200,true,true);
         u[1]=new UscatorPar(e2,3,3,2100,true,false);

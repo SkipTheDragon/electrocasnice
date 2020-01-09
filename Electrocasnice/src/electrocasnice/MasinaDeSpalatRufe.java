@@ -11,9 +11,13 @@ package electrocasnice;
  * Referance link https://www.emag.ro/masina-de-spalat-rufe-aeg-8-kg-1600-rpm-clasa-a-motor-okoinverter-tehnologie-prosteam-alb-l7fee68s/pd/DGDZC1BBM/
  */
 
+//clasa copil
+
 public class MasinaDeSpalatRufe extends Electrocasnice {
     int rotatii, zgomotCentrifugare, zgomotSpalare, greutate, consumApa;
     String culoare;
+    
+    //constructor fara parametri
     
     MasinaDeSpalatRufe(){
         super(); // Putem accessa valorile/constructorul/functiile clasei parinte
@@ -24,6 +28,11 @@ public class MasinaDeSpalatRufe extends Electrocasnice {
         greutate = 7;
         consumApa= 90008;
     }
+    
+      //Super se foloseste pentru a apela clasa parinte(Electrocasnice)
+    
+    //constructor cu parametri
+    
     MasinaDeSpalatRufe(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int rotatii, int zgomotCentrifugare, int zgomotSpalare, String culoare, int greutate, int consumApa){
         super(Producator, EficientaEnergetica, P, UzCasnic);
         this.rotatii= rotatii;
@@ -52,6 +61,9 @@ public class MasinaDeSpalatRufe extends Electrocasnice {
         this.consumApa= consumApa;
 
     }
+    
+    //metoda toString pentru a putea afisa obiectul.
+    
     public String toString(){
         return "Culoare: "+culoare+", Zgomot spalare "+zgomotSpalare+" db, Zgomot centrifugare: "+zgomotCentrifugare+" db, Rotatii: "+rotatii+" RPM, Greutate:"+greutate+", Consum apa anual:"+consumApa+".";
     }

@@ -15,10 +15,15 @@ import electrocasnice.Electrocasnice;
  * @author Leo
  * Reference Link: https://www.emag.ro/masina-de-spalat-vase-incorporabila-beko-10-seturi-5-programe-clasa-a-45-cm-dis25011/pd/D3G6QJBBM/
  */
+
+//clasa copil
+
 public class MasinaDeSpalatVase extends Electrocasnice {
     int sloturiVase, programNum, nivelZgomort, greutate, consumApa;
     double energyConsumptionPerCycle;
     String Culoare;
+    
+    //constructor fara parametri
     
     MasinaDeSpalatVase(){
         super();
@@ -30,6 +35,11 @@ public class MasinaDeSpalatVase extends Electrocasnice {
         greutate = 9;
         consumApa = 54484;
     }
+    
+    //Super se foloseste pentru a apela clasa parinte(Electrocasnice)
+    
+    //constructor cu parametri
+    
     MasinaDeSpalatVase(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int sloturiVase, int nivelZgomort, int programNum, double energyConsumptionPerCycle, String Culoare,int greutate ,int consumApa){
         super(Producator, EficientaEnergetica, P, UzCasnic);
         this.sloturiVase= sloturiVase;
@@ -60,7 +70,10 @@ public class MasinaDeSpalatVase extends Electrocasnice {
         this.greutate= v.greutate;
         this.consumApa= v.consumApa;
     }
+    
+        //metoda toString pentru a putea afisa obiectul.
+    
     public String toString(){
-        return "Numar programe: "+programNum+", Nivelul de zgomot este "+nivelZgomort+", Sloturi pentru vase: "+sloturiVase+", Are un consum de "+energyConsumptionPerCycle+"Kw/h per ciclu, Colarea "+Culoare+ ",Greutate" +greutate+ "kg, Consum apa anual:"+ consumApa+".";
+        return "Numar programe: "+programNum+", Nivelul de zgomot este "+nivelZgomort+", Sloturi pentru vase: "+sloturiVase+", Are un consum de "+energyConsumptionPerCycle+"Kw/h per ciclu, Culoare: "+Culoare+ ",Greutate" +greutate+ "kg, Consum apa anual:"+ consumApa+".";
     }
 }

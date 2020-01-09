@@ -9,9 +9,14 @@ package electrocasnice;
  *
  * @author cezar
  */
+
+//clasa copil
+
 public class Calorifer extends Electrocasnice {
     int Putere, nrElementi;
     String Culoare;
+    
+    //constructor fara parametri
     
     Calorifer(){
         super();
@@ -19,6 +24,11 @@ public class Calorifer extends Electrocasnice {
         nrElementi=10;
         Culoare="Alb";
     }
+    
+    //Super se foloseste pentru a apela clasa parinte(Electrocasnice)
+    
+    //constructor cu parametri
+    
     Calorifer(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int Putere, int nrElementi, String Culoare){
         super(Producator, EficientaEnergetica, P, UzCasnic);
         this.Putere=Putere;
@@ -37,6 +47,9 @@ public class Calorifer extends Electrocasnice {
         this.nrElementi=c.nrElementi;
         this.Culoare=c.Culoare;
     }
+    
+    //metoda toString pentru a putea afisa obiectul.
+    
     public String toString(){
         return " Puterea este de "+Putere+"W, Caloriferul are "+nrElementi+" elementi, Culoarea este "+Culoare+".";
     }

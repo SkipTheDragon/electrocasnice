@@ -9,9 +9,14 @@ package electrocasnice;
  *
  * @author Andrei
  */
+
+//clasa copil
+
 public class Televizor extends Electrocasnice {
         int Diagonala;
     boolean smart, UHD, Curbat, OLED;
+    
+    //constructor fara parametri
     
     Televizor(){
     super();
@@ -21,6 +26,11 @@ public class Televizor extends Electrocasnice {
     Curbat=false;
     OLED=false;
 }
+    
+    //Super se foloseste pentru a apela clasa parinte(Electrocasnice)
+    
+    //constructor fara parametri
+    
     
     Televizor(String Producator, String EficientaEnergetica, float Pret, boolean UzCasnic, int Diagonala, boolean smart, boolean UHD, boolean Curbat, boolean OLED){
        super(Producator, EficientaEnergetica, Pret, UzCasnic);
@@ -46,6 +56,9 @@ public class Televizor extends Electrocasnice {
        this.Curbat=t.Curbat;
        this.OLED=t.OLED;
     }
+    
+        //metoda toString pentru a putea afisa obiectul.
+    
     public String toString(){
         return "Diagonala televizorului este de "+Diagonala+" cm. "+(smart?"Cu":"Fara")+" functie smart, "+(UHD?"cu":"fara")+" rezolutie UHD. Televizor curbat: "+(Curbat?"da":"nu")+", Televizorul OLED: "+(OLED?"da.":"nu.");
     }

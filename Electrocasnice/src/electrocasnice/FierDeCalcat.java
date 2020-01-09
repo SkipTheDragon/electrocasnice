@@ -9,11 +9,16 @@ package electrocasnice;
  *
  * @author Rzvn69
  */
+
+//clasa copil
+
 public class FierDeCalcat extends Electrocasnice{
         String Talpa, Culoare;
         int Putere, Jet_De_Abur, Tensiune;
         boolean AutoCuratare;
 
+        //constructor fara parametri
+        
     FierDeCalcat(){
         super();
         Talpa="Aluminiu";
@@ -23,6 +28,10 @@ public class FierDeCalcat extends Electrocasnice{
         Tensiune=220;
         AutoCuratare=true;
     }
+    
+    //Super se foloseste pentru a apela clasa parinte(Electrocasnice)
+    
+    //constructor cu parametri
     
     FierDeCalcat(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, String Talpa, String Culoare, int Putere, int Tensiune, int Jet_De_Abur, boolean AutoCuratare){
         super(Producator, EficientaEnergetica, P, UzCasnic);
@@ -53,6 +62,9 @@ FierDeCalcat(FierDeCalcat f){
         this.Tensiune=f.Tensiune;
         this.AutoCuratare=f.AutoCuratare;
 }
+
+  //metoda toString pentru a putea afisa obiectul.
+
 public String toString(){
         return "Culoare "+Culoare+" cu talpa "+Talpa+", jet de aburi "+Jet_De_Abur+", putere de: "+Putere+" W, "+(AutoCuratare?"cu":"fara")+" functie de Autocuratare si Tensiune de: "+Tensiune+"V.";   
 }

@@ -11,10 +11,17 @@ package electrocasnice;
  *
  * @author DELL
  */
+
+//clasa copil
+
 public class AerConditionat extends Electrocasnice{
     int Capacitate, NivelZgomot;
     boolean wifi, kitInstalare, Portabil;
+
+//Super se foloseste pentru a apela clasa parinte(Electrocasnice)
     
+  //constructor fara parametri
+   
     AerConditionat(){
     super();
     Capacitate=12000;
@@ -23,6 +30,8 @@ public class AerConditionat extends Electrocasnice{
     kitInstalare=false;
     Portabil=false;
 }
+
+   //constructor cu parametri
     
     AerConditionat(String Producator, String EficientaEnergetica, float P, boolean UzCasnic, int Capacitate, int NivelZgomot, boolean wifi, boolean kitInstalare, boolean Portabil){
        super(Producator, EficientaEnergetica, P, UzCasnic);
@@ -48,6 +57,9 @@ public class AerConditionat extends Electrocasnice{
        this.kitInstalare=a.kitInstalare;
        this.Portabil=a.Portabil;
     }
+    
+    //metoda toString pentru a putea afisa obiectul.
+    
     public String toString(){
         String newline = System.getProperty("line.separator");
         return "Capacitatea aerului conditionat este de "+Capacitate+"BTU, Nivelul de zgomot al unitatii interne este de "+NivelZgomot+"dB, Functie WiFi: "+(wifi?"Da, ":"Nu, ")+"Kit instalare inclus in pachet: "+(kitInstalare?"Da, ":"Nu, ")+"Portabil: "+(Portabil?"Da.":"Nu.");
