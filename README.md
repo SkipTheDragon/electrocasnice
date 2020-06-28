@@ -4,10 +4,6 @@
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See installing for notes on how to get the project up and running on your machine.
 
-## Prerequisites
- - [Apache NetBeans](https://netbeans.apache.org/download/index.html) (you can also use Eclipe etc.)
- - [A copy of our project](https://github.com/SkipTheDragon/electrocasnice/archive/master.zip)
- 
 
 ## Installing
  - Open the project in Apache NetBeans. You may need to use *Resolve project problems* if you're running a version different from v11.1.
