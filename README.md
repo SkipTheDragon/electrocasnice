@@ -12,6 +12,6 @@ These instructions will get you a copy of the project up and running on your loc
 ## Authors
 
 * **Petrescu Razvan-Costinel** - *Class development* - [Rzvn6969](https://github.com/Rzvn6969)
-* **Tudorache Leonard-Valentin** - *User interface backend* - [SkipTheDragon](https://github.com/SkipTheDragon)
+* **Tudorache Leonard-Valentin** - *User interface and backend* - [SkipTheDragon](https://github.com/SkipTheDragon)
 * **Vasiliu Andrei-Radu** - *Class development* - [andreiv24](https://github.com/andreiv24)
 * **Vrabie Cezar-Ionut** - *User interface* - [cezarvrabie99](https://github.com/cezarvrabie99)
