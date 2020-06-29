@@ -1,5 +1,5 @@
 # Project electrocasnice(appliance)
-  A simple project that can be used to find certain items in an catalog.
+  A simple project that can be used to find certain items in a catalog.
   
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See installing for notes on how to get the project up and running on your machine.
